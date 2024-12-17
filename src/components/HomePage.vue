@@ -6,10 +6,26 @@
     </div>
     <nav>
       <ul>
-        <li><router-link to="/">Home</router-link></li>
-        <li><router-link to="/about">About</router-link></li>
-        <li><router-link to="/services">Services</router-link></li>
-        <li><router-link to="/contact">Contact</router-link></li>
+        <li><router-link to="/">
+              <span>
+                <img width="30" height="30" src="./../assets/images/home.png" alt="home"/>
+              </span>HOME
+            </router-link></li>
+        <li><router-link to="/about">              
+              <span>
+                <img width="30" height="30" src="./../assets/images/about.png" alt="home"/>
+              </span>ABOUT
+            </router-link></li>
+        <li><router-link to="/services">
+              <span>
+                <img width="30" height="30" src="./../assets/images/services.png" alt="home"/>
+              </span>SERVICES
+            </router-link></li>
+        <li><router-link to="/contact">
+              <span>
+                <img width="30" height="30" src="./../assets/images/contact.png" alt="home"/>
+              </span>CONTACT
+            </router-link></li>
       </ul>
     </nav>
   </header>
@@ -45,6 +61,8 @@
 </template>
 
 <script>
+import './../assets/styles/homepage.css'
+
 export default {
   name: 'HomePage',
   props: {
@@ -52,34 +70,3 @@ export default {
   }
 }
 </script>
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-header {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding: 1%;
-}
-.logo {
-  width: 70px;
-  height: 70px;
-  color: #ffffff;
-  background-color: #ffffff;
-  border-radius: 10px;
-}
-h3 {
-  margin: 40px 0 0;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
-}
-</style>
