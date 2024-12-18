@@ -29,6 +29,11 @@
       </ul>
     </nav>
   </header>
+  <main>
+    <h1>ANGA</h1>
+    <h2>HUB</h2>
+    <h3>Empowering Africa with Next-Gen Solutions</h3>
+  </main>
   <div class="hello">
     <h1>{{ msg }}</h1>
     <p>

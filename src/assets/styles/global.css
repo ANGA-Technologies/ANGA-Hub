@@ -1,5 +1,20 @@
 body {
-    background: radial-gradient(#8A2BE2, #040828);
+    background: #040828;
     height: 100vh;
     width: 100vw;
+    overflow: hidden;
     }
+
+body::after {
+    content: '';
+    position: absolute;
+    width: 450px;
+    height: 300px;
+    background: #8A2BE2;
+    border: 15px solid #d32f2f00;
+    border-radius: 30%;
+    top: 30%;
+    left: 45%;
+    z-index: -99;
+    filter: blur(40px);
+}
