@@ -1,31 +1,63 @@
-<template>
-  <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
-  <HomePage msg="Welcome to Your Vue.js App"/>
+<template>  
+  <div class="background"></div>
+  <header>
+    <div class="logo">
+      ANGA Hub
+      <!-- <img src="@/assets/logo.png" alt="Logo"> -->
+    </div>
+    <button class="menu-toggle" @click="toggleMenu">
+      <span class="menu-icon">☰</span>
+    </button>
+    <nav :class="{ open: isMenuOpen }">
+      <ul  @click="toggleMenu">
+        <li><router-link to="/">
+              <span>
+                <img width="30" src="@/assets/images/home.png" alt="home icon"/> HOME
+              </span>
+            </router-link></li>
+        <li><router-link to="/about">              
+              <span>
+                <img width="30" src="@/assets/images/about.png" alt="about icon"/> ABOUT
+              </span>
+            </router-link></li>
+        <li><router-link to="/services">
+              <span>
+                <img width="30" src="@/assets/images/services.png" alt="service icon"/> SERVICES
+              </span>
+            </router-link></li>
+        <li><router-link to="/contact">
+              <span>
+                <img width="30" src="@/assets/images/contact.png" alt="contact icon"/> CONTACT
+              </span>
+            </router-link></li>
+      </ul>
+    </nav>
+  </header>
+  <router-view></router-view>
 </template>
 
 <script>
-// import HelloWorld from './components/HelloWorld.vue'
-import HomePage from './components/HomePage.vue'
 
-export default {
-  name: 'App',
-  components: {
-    // HelloWorld,
-    HomePage
-  }
-}
+  export default {
+    data() {
+      return {
+        isMenuOpen: false,
+      };
+    },
+    methods: {
+      toggleMenu() {
+        this.isMenuOpen = !this.isMenuOpen;
+      },
+    },
+  };
+
 </script>
 
-<style>
-#app {
-  /* font-family: Avenir, Helvetica, Arial, sans-serif; */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  /* margin-top: 10px; */
-  /* background: radial-gradient(#8A2BE2, #040828);
-  height: 100vh;
-  width: 100vw; */
-}
-</style>
+<!-- <style>
+  #app {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: #2c3e50;
+  }
+</style> -->

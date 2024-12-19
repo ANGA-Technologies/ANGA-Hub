@@ -1,77 +1,76 @@
 <template>
-  <header>
-    <div class="logo">
-      ANGA Hub
-      <!-- <img src="@/assets/logo.png" alt="Logo"> -->
-    </div>
-    <nav>
-      <ul>
-        <li><router-link to="/">
-              <span>
-                <img width="30" height="30" src="./../assets/images/home.png" alt="home"/>
-              </span>HOME
-            </router-link></li>
-        <li><router-link to="/about">              
-              <span>
-                <img width="30" height="30" src="./../assets/images/about.png" alt="home"/>
-              </span>ABOUT
-            </router-link></li>
-        <li><router-link to="/services">
-              <span>
-                <img width="30" height="30" src="./../assets/images/services.png" alt="home"/>
-              </span>SERVICES
-            </router-link></li>
-        <li><router-link to="/contact">
-              <span>
-                <img width="30" height="30" src="./../assets/images/contact.png" alt="home"/>
-              </span>CONTACT
-            </router-link></li>
-      </ul>
-    </nav>
-  </header>
-  <main>
-    <h1>ANGA</h1>
-    <h2>HUB</h2>
-    <h3>Empowering Africa with Next-Gen Solutions</h3>
-  </main>
-  <div class="hello">
-    <h1>{{ msg }}</h1>
-    <p>
-      For a guide and recipes on how to configure / customize this project,<br>
-      check out the
-      <a href="https://cli.vuejs.org" target="_blank" rel="noopener">vue-cli documentation</a>.
-    </p>
-    <h3>Installed CLI Plugins</h3>
-    <ul>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-babel" target="_blank" rel="noopener">babel</a></li>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-eslint" target="_blank" rel="noopener">eslint</a></li>
-    </ul>
-    <h3>Essential Links</h3>
-    <ul>
-      <li><a href="https://vuejs.org" target="_blank" rel="noopener">Core Docs</a></li>
-      <li><a href="https://forum.vuejs.org" target="_blank" rel="noopener">Forum</a></li>
-      <li><a href="https://chat.vuejs.org" target="_blank" rel="noopener">Community Chat</a></li>
-      <li><a href="https://twitter.com/vuejs" target="_blank" rel="noopener">Twitter</a></li>
-      <li><a href="https://news.vuejs.org" target="_blank" rel="noopener">News</a></li>
-    </ul>
-    <h3>Ecosystem</h3>
-    <ul>
-      <li><a href="https://router.vuejs.org" target="_blank" rel="noopener">vue-router</a></li>
-      <li><a href="https://vuex.vuejs.org" target="_blank" rel="noopener">vuex</a></li>
-      <li><a href="https://github.com/vuejs/vue-devtools#vue-devtools" target="_blank" rel="noopener">vue-devtools</a></li>
-      <li><a href="https://vue-loader.vuejs.org" target="_blank" rel="noopener">vue-loader</a></li>
-      <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a></li>
-    </ul>
-  </div>
+  <router-view>
+    <main>
+      <h1>ANGA</h1>
+      <h2>HUB</h2>
+      <h3>{{ displayText }}</h3>
+    </main>
+    <!-- <h1>{{ msg }}</h1> -->
+  </router-view>
 </template>
 
 <script>
-import './../assets/styles/homepage.css'
 
 export default {
   name: 'HomePage',
-  props: {
-    msg: String
-  }
-}
+  data() {
+    return {
+      phrases: [
+        "Empowering Africa with Next-Gen Solutions",
+        "Africa NextGen Apex Hub",
+        "Proud Pan-Africans"
+      ],
+      currentPhraseIndex: 0,
+      displayText: "",
+      typingSpeed: 100, // Typing speed (ms)
+      deletingSpeed: 50, // Deleting speed (ms)
+      isDeleting: false, // Toggle between typing and deleting
+    };
+  },
+  mounted() {
+    this.startTypingEffect();
+  },
+  methods: {
+    startTypingEffect() {
+      let i = 0; // Character index
+
+      const type = () => {
+        const currentPhrase = this.phrases[this.currentPhraseIndex];
+
+        if (!this.isDeleting && i < currentPhrase.length) {
+          // Typing
+          this.displayText += currentPhrase.charAt(i);
+          i++;
+          setTimeout(type, this.typingSpeed);
+        } else if (this.isDeleting && i > 0) {
+          // Deleting
+          this.displayText = this.displayText.slice(0, -1);
+          i--;
+          setTimeout(type, this.deletingSpeed);
+        } else {
+          // Pause and switch between typing and deleting
+          if (!this.isDeleting) {
+            setTimeout(() => {
+              this.isDeleting = true;
+              type();
+            }, 1000); // Pause after typing
+          } else {
+            this.isDeleting = false;
+            this.currentPhraseIndex =
+              (this.currentPhraseIndex + 1) % this.phrases.length; // Move to the next phrase
+            setTimeout(() => {
+              i = 0; // Reset index for the new phrase
+              type();
+            }, 500); // Pause before starting the next phrase
+          }
+        }
+      };
+
+      type();
+    },
+  },
+};
+
 </script>
+
+<style scoped src="@/assets/styles/homepage.css"></style>
