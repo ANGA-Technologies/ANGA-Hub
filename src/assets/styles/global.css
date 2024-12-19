@@ -154,9 +154,9 @@ li span {
         top: 0;
         right: -100%; /* Start off-screen to the right */
         width: 250px;
-        height: 99.5%;
+        height: 99.9%;
         /* background: radial-gradient(#040828 60%, #f0f0f5); */
-        background: #c46f6f;
+        /* background: #c46f6f; */
         overflow-y: auto;
         transition: right 0.3s ease; /* Slide in from the right */
         z-index: 1000;
@@ -165,6 +165,10 @@ li span {
         align-items: center;
         border-top-left-radius: 30px;
         border-bottom-left-radius: 30px;
+
+        background: #08092C;
+        box-shadow: inset 77.5px -77.5px 77.5px rgba(165, 165, 165, 0.1), inset -77.5px 77.5px 77.5px rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(77.5px);
     }
 
     nav.open {
@@ -179,4 +183,17 @@ li span {
     nav ul li {
         margin: 20px 0;
     }
+}
+
+main {
+    text-align: center;
+    color: #f0f0f5;
+    background: #f0f0f51f;
+    height: 80vh;
+    border-radius: 15px;
+    padding: 2%;
+    background-image: url("@/assets/images/africa.png");
+    background-size: 115% auto; /* Ensure the image covers the area */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat;
 }

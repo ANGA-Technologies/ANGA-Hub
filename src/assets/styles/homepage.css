@@ -1,9 +1,40 @@
-main {
-    text-align: center;
-    color: #f0f0f5;
-    background: #f0f0f51f;
-    height: 80vh;
-    /* background-image: "@"; */
+h1 {
+    position: absolute;
+    width: 305px;
+    height: 134px;
+    left: 10%;
+    top: 30%;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 100px;
+    line-height: 150px;
+
+    background: linear-gradient(180deg, #FFFFFF 0%, #999999 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+
+h2 {
+    position: absolute;
+    left: 40%;
+    top: 40%;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 96px;
+    line-height: 144px;
+    /* identical to box height */
+
+    background: linear-gradient(103.88deg, #8A2BE2 -27.14%, #D32F2F 73.7%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
 }
 
 h3 {
@@ -14,6 +45,10 @@ h3 {
     overflow: hidden;
     border-right: 2px solid black; /* Cursor */
     animation: blink 0.7s steps(2, start) infinite;
+    left: 7%;
+    top: 70%;
+    position: absolute;
+    text-align: left;
   }
   
 @keyframes blink {
@@ -26,4 +61,6 @@ h3 {
     100% {
         border-color: transparent;
     }
-  }
+}
+
+
