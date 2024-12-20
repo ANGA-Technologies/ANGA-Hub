@@ -1,7 +1,9 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     background: #040828;
-    /* height: 100%;
-    width: 100%; */
     overflow: hidden;
 }
 
@@ -20,57 +22,6 @@ body::after {
     animation: fade 5s infinite;
 }
 
-/* header {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 1%;
-    color: #F0F0F5;
-}
-
-.logo {
-    width: 70px;
-    height: 70px;
-    color: #ffffff;
-    background-color: #ffffff;
-    border-radius: 10px;
-}
-
-h3 {
-    margin: 40px 0 0;
-}
-
-nav {
-    color: #F0F0F5;
-}
-
-ul {
-    list-style-type: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-li {
-    display: inline-block;
-    margin: 0 20px;
-}
-
-li span {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 10px;
-}
-
-a {
-    font-family: "Comfortaa";
-    color: #F0F0F5;
-    text-decoration: none;
-} */
-
-/* General Header Styles */
 header {
     display: flex;
     justify-content: space-between;
@@ -136,8 +87,18 @@ li span {
     }
 }
 
+/* Tablet Sytle */
+
+@media (max-width: 800px) {
+    nav ul {
+        flex-direction: row;
+        
+    }
+}
+
+
 /* Mobile Styles */
-@media (max-width: 768px) {
+@media (max-width: 500px) {
 
     body::after {
         width: 50%;
@@ -188,7 +149,7 @@ li span {
 main {
     text-align: center;
     color: #f0f0f5;
-    background: #f0f0f51f;
+    /* background: #f0f0f51f; */
     height: 80vh;
     border-radius: 15px;
     padding: 2%;
