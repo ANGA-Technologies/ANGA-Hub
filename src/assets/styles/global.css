@@ -1,5 +1,6 @@
 * {
     box-sizing: border-box;
+    font-family: 'Poppins';
 }
 
 body {
@@ -108,6 +109,10 @@ li span {
 
     .menu-toggle {
         display: block;
+    }
+    .close {
+        font-size: 1em;
+
     }
 
     nav {

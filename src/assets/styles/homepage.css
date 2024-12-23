@@ -39,7 +39,7 @@ h2 {
 
 h3 {
     display: inline-block;
-    font-family: "Courier New", Courier, monospace;
+    font-family: 'Poppins';
     white-space: nowrap;
     text-wrap: wrap;
     overflow: hidden;
