@@ -1,12 +1,14 @@
 <template>
   <div id="app" class="container">
     <header>
-      <div class="logo">LOGO</div>
+      <div class="logo">
+        <img src="@/assets/images/Logo 3.0.png" alt="Logo" />
+      </div>
       <div class="menu-toggle" @click="toggleMenu">
-        <div v-if="!menuOpen" class="menu-icon">☰</div>
+        <div v-if="!isMenuOpen" class="menu-icon">☰</div>
         <div v-else class="close">✕</div>
       </div>
-      <nav :class="{ open: menuOpen }">
+      <nav :class="{ open: isMenuOpen }">
         <ul @click="toggleMenu">
           <li>
             <router-link to="/">
@@ -42,3 +44,18 @@
     <router-view></router-view>
   </div>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      isMenuOpen: false,
+    };
+  },
+  methods: {
+    toggleMenu() {
+      this.isMenuOpen = !this.isMenuOpen;
+    },
+  },
+};
+</script>

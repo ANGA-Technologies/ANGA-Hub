@@ -1,6 +1,7 @@
 * {
     box-sizing: border-box;
     font-family: 'Poppins';
+    -webkit-tap-highlight-color: transparent;
 }
 
 body {
@@ -41,6 +42,11 @@ header {
     border-radius: 10px;
 }
 
+.logo img{
+    width: 100%;
+    height: 100%;
+}
+
 nav ul {
     list-style: none;
     padding: 0;
@@ -67,7 +73,15 @@ nav ul li a {
     font-size: 2em;
     color: #F0F0F5;
     cursor: pointer;
+    position: fixed;
+    -webkit-tap-highlight-color: transparent;
 }
+
+.menu-toggle:active {
+    animation: rotate .5s;
+}
+
+
 
 li span {
     display: flex;
@@ -87,6 +101,22 @@ li span {
         opacity: 1;
     }
 }
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+        opacity: 1;
+    }
+    50% {
+        transform: rotate(90deg);
+        opacity: 0;
+    }
+    100% {
+        transform: rotate(180deg);
+        opacity: 1;
+    }
+}
+
 
 /* Tablet Sytle */
 
@@ -109,29 +139,27 @@ li span {
 
     .menu-toggle {
         display: block;
+        z-index: 1999;
+        position: relative;
     }
     .close {
         font-size: 1em;
-
     }
 
     nav {
         position: fixed;
         top: 0;
-        right: -100%; /* Start off-screen to the right */
+        right: -100%;
         width: 250px;
         height: 99.9%;
-        /* background: radial-gradient(#040828 60%, #f0f0f5); */
-        /* background: #c46f6f; */
         overflow-y: auto;
-        transition: right 0.3s ease; /* Slide in from the right */
+        transition: right 0.3s ease;
         z-index: 1000;
         display: flex;
         justify-content: center;
         align-items: center;
         border-top-left-radius: 30px;
         border-bottom-left-radius: 30px;
-
         background: #08092C;
         box-shadow: inset 77.5px -77.5px 77.5px rgba(165, 165, 165, 0.1), inset -77.5px 77.5px 77.5px rgba(255, 255, 255, 0.1);
         backdrop-filter: blur(77.5px);
