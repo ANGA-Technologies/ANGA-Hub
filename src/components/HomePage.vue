@@ -5,7 +5,6 @@
       <h2>HUB</h2>
       <h3>{{ displayText }}</h3>
     </main>
-    <!-- <h1>{{ msg }}</h1> -->
   </router-view>
 </template>
 
@@ -22,9 +21,9 @@ export default {
       ],
       currentPhraseIndex: 0,
       displayText: "",
-      typingSpeed: 100, // Typing speed (ms)
-      deletingSpeed: 50, // Deleting speed (ms)
-      isDeleting: false, // Toggle between typing and deleting
+      typingSpeed: 100,
+      deletingSpeed: 50,
+      isDeleting: false,
     };
   },
   mounted() {

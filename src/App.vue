@@ -42,6 +42,7 @@
       </nav>
     </header>
     <router-view></router-view>
+    <div class="background"></div>
   </div>
 </template>
 

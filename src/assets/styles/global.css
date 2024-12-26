@@ -2,6 +2,8 @@
     box-sizing: border-box;
     font-family: 'Poppins';
     -webkit-tap-highlight-color: transparent;
+    margin: 0;
+    padding: 0;
 }
 
 body {
@@ -20,7 +22,7 @@ body::after {
     top: 30%;
     left: 45%;
     z-index: -99;
-    filter: blur(40px);
+    filter: blur(100px);
     animation: fade 5s infinite;
 }
 
@@ -95,7 +97,7 @@ li span {
         opacity: 1;
     }
     50% {
-        opacity: .4;
+        opacity: .6;
     }
     100% {
         opacity: 1;
@@ -133,8 +135,9 @@ li span {
 
     body::after {
         width: 50%;
-        height: 20%;
-        left: 30%;
+        height: 60%;
+        left: 20%;
+        top: 10%;
     }
 
     .menu-toggle {
@@ -177,17 +180,54 @@ li span {
     nav ul li {
         margin: 20px 0;
     }
+
 }
 
 main {
     text-align: center;
     color: #f0f0f5;
-    /* background: #f0f0f51f; */
     height: 80vh;
     border-radius: 15px;
     padding: 2%;
+    position: relative; /* Establish stacking context */
+    overflow: hidden; /* Ensure pseudo-element doesn't exceed bounds */
+}
+
+main::before {
+    content: ""; /* Empty content to create a visual element */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background-image: url("@/assets/images/africa.png");
     background-size: 115% auto; /* Ensure the image covers the area */
     background-position: center; /* Center the image */
     background-repeat: no-repeat;
+    opacity: 0.4; /* Adjust the opacity of the background image */
+    z-index: -1; /* Place behind the main content */
+}
+
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image:
+        linear-gradient(90deg, rgba(255, 255, 255, 0.1) 2px, transparent 1px),
+        linear-gradient(rgba(255, 255, 255, 0.1) 2px, transparent 1px);
+        /* url('anga-hub/src/assets/images/africa.png');  */
+    background-size: 100px 100px, 100px 100px, auto;
+    background-position: center;
+    z-index: 5;
+
+    -webkit-mask-image: 
+        linear-gradient(to bottom, transparent, black 20%, black 80%, transparent), /* Vertical transparency */
+        linear-gradient(to right, transparent, black 20%, black 80%, transparent); /* Horizontal transparency */
+    mask-image: 
+        linear-gradient(to bottom, transparent, black 20%, black 80%, transparent), /* Vertical transparency */
+        linear-gradient(to right, transparent, black 20%, black 80%, transparent); /* Horizontal transparency */
+    -webkit-mask-composite: intersect;
+    mask-composite: intersect;
 }
