@@ -1,21 +1,40 @@
 <template>
     <router-view>
         <main>
-            <h1>ANGA</h1>
-            <h2>HUB</h2>
-            <h3>Empowering Africa with Next-Gen Solutions</h3>
+            <h1>Services</h1>
+            <div class="options">
+                <div @click="mobile" class="mobile">
+                    <h5>Mobile App</h5>
+                </div>
+                <div @click="consult" class="consult">
+                    <h5>IT Consultancy</h5>
+                </div>
+                <div @click="web" class="web">
+                    <h5>Web App</h5>
+                </div>
+            </div>
+            <div class="content">
+                
+            </div>
         </main>
     </router-view>
 </template>
     
-<!-- <script>
-    import '@/assets/styles/homepage.css'
-    
+<script>
     export default {
-        name: 'HomePage',
-        props: {
-        msg: String
+        name: 'ServicePage',
+        methods: {
+            mobile() {
+                alert('Mobile App Development');
+            },
+            consult() {
+                alert('IT Consultancy');
+            },
+            web() {
+                alert('Web App Development');
+            }
         }
     }
-</script> -->
-    
+</script>
+
+<style scoped src="@/assets/styles/servicepage.css"></style>
