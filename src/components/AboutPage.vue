@@ -10,8 +10,8 @@
                 <li>To expand into various sectors, creating a diverse portfolio of companies under the ANGA brand.</li>
                 <li>To prioritize sustainability, social impact, and excellence in all operations.</li>
             </ul>
-            <h2>Vision</h2>
-            <p class="pvision">To be a leading conglomerate that drives innovation, solves challenges, and creates value across multiple sectors in Africa and beyond.</p>
+            <h2 id="vision">Vision</h2>
+            <p class="vision">To be a leading conglomerate that drives innovation, solves challenges, and creates value across multiple sectors in Africa and beyond.</p>
             <h2>Core Values</h2>
             <div class="corevalues">
                 <div>
@@ -21,9 +21,9 @@
                     <h3>Innovation</h3>
                 </div>
                 <div>
-                    <Span>
+                    <span>
                         <img src="@/assets/images/integrity.png" alt="integrity">
-                    </Span>
+                    </span>
                     <h3>Integrity</h3>
                 </div>
                 <div>
@@ -42,22 +42,21 @@
                     <span>
                         <img src="@/assets/images/sustainability.png" alt="sustainability">
                     </span>
-                    <h3>sustainability</h3>
+                    <h3>Sustainability</h3>
                 </div>
             </div>
         </main>
         <h1>{{ msg }}</h1>
     </router-view>
 </template>
-    
+
 <script>
-    // export default {
-    //     name: 'AboutPage',
-    //     props: {
-    //         msg: String
-    //     }
-    // }
+    export default {
+        name: 'AboutPage',
+        props: {
+            msg: String,
+        },
+    };
 </script>
 
 <style scoped src="@/assets/styles/aboutpage.css"></style>
-    

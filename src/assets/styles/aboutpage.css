@@ -1,8 +1,125 @@
 main {
     margin: 0;
-    padding: 0;
     text-align: left;
     color: #F0F0F5;
-    overflow-y: scroll;
 }
 
+h1 {
+    font-size: 60px;
+    margin: 20px;
+    background: linear-gradient(103.88deg, #8A2BE2 -27.14%, #D32F2F 73.7%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    position: relative;
+}
+
+.underline {
+    width: 50%;
+    height: 4px;
+    background-color: #8A2BE2;
+    margin: 10px auto;
+}
+
+h2 {
+    font-size: 35px;
+    padding-left: 20px;
+}
+
+p {
+    font-size: 20px;
+    text-align: justify;
+    padding: 1rem;
+}
+
+ul {
+    font-size: 18px;
+    padding: 1rem;
+    margin-left: 10px;
+}
+
+.corevalues {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.circles-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 15px;
+    padding: 20px;
+    overflow-x: auto;
+    margin-top: 20px;
+}
+
+.circle {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #8A2BE2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    color: #fff;
+    flex-shrink: 0;
+}
+
+.circle img {
+    width: 50%;
+    height: 50%;
+    object-fit: contain;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 500px) {
+    h1 {
+        font-size: 40px;
+        margin: 10px;
+    }
+
+    .underline {
+        width: 70%;
+    }
+
+    h2 {
+        font-size: 28px;
+        padding-left: 15px;
+    }
+
+    p {
+        font-size: 16px;
+        padding: 0.8rem;
+    }
+
+    ul {
+        font-size: 16px;
+        padding: 0.8rem;
+        margin-left: 8px;
+    }
+
+    .corevalues {
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .circles-container {
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .circle {
+        width: 60px;
+        height: 60px;
+        box-shadow: 0 3px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    .circle img {
+        width: 40%;
+        height: 40%;
+    }
+}
