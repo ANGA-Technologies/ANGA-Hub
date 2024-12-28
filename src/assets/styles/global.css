@@ -8,7 +8,7 @@
 
 body {
     background: #040828;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 body::after {

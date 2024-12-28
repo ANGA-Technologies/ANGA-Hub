@@ -1,4 +1,8 @@
 main {
+    margin: 0;
+    padding: 0;
     text-align: left;
     color: #F0F0F5;
+    overflow-y: scroll;
 }
+
