@@ -1,0 +1,49 @@
+/* Line 17 */
+
+h1 {
+    position: relative;
+    display: flex;
+    font-family: 'Poppins';
+    text-align: left;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 75px;
+    background: linear-gradient(103.88deg, #8A2BE2 -27.14%, #D32F2F 73.7%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    margin-bottom: 5%;
+}
+
+h1::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 50%;
+    height: 2px;
+    background-color: #f0f0f5; /* Line color */
+}
+
+h1::before {
+    content: '';
+    position: absolute;
+    bottom: -9px; 
+    right: 50%;
+    width: 10px; 
+    height: 10px;
+    background-color: #f0f0f5;
+    transform: rotate(45deg);
+}
+
+.options {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 5%;
+    border: 2px solid #f0f0f5;
+    padding: 2%;
+    border-radius: 20px;
+}

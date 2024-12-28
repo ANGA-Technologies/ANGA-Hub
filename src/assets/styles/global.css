@@ -14,25 +14,30 @@ body {
 body::after {
     content: '';
     position: fixed;
-    width: 450px;
-    height: 300px;
-    background: #8A2BE2;
-    border: 15px solid #d32f2f00;
-    border-radius: 30%;
-    top: 30%;
-    left: 45%;
+    width: 500px;
+    height: 400px;
+    background: linear-gradient(199.29deg, #8A2BE2 12.36%, #D32F2F 94.21%);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-89.71deg);
     z-index: -99;
     filter: blur(100px);
     animation: fade 5s infinite;
 }
 
 header {
+    margin: 0;
+    position: sticky;
+    top: -1px;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    /* background-color: #333; */
+    z-index: 10;
     color: #F0F0F5;
+    background: #040828;
+    box-shadow: inset 77.5px -77.5px 77.5px rgba(165, 165, 165, 0.1), inset -77.5px 77.5px 77.5px rgba(255, 255, 255, 0.1);
 }
 
 .logo {
@@ -94,13 +99,13 @@ li span {
 
 @keyframes fade {
     0% {
-        opacity: 1;
+        opacity: .8;
     }
     50% {
-        opacity: .6;
+        opacity: .4;
     }
     100% {
-        opacity: 1;
+        opacity: .8;
     }
 }
 
@@ -133,12 +138,12 @@ li span {
 /* Mobile Styles */
 @media (max-width: 500px) {
 
-    body::after {
-        width: 50%;
-        height: 60%;
-        left: 20%;
-        top: 10%;
-    }
+    /* body::after {
+        width: 539.44px;
+        height: 414.62px;
+        left: -10%;
+        top: 75.45px;
+    } */
 
     .menu-toggle {
         display: block;
@@ -186,11 +191,10 @@ li span {
 main {
     text-align: center;
     color: #f0f0f5;
-    height: 80vh;
+    height: 100%;
     border-radius: 15px;
     padding: 2%;
-    position: relative; /* Establish stacking context */
-    overflow: hidden; /* Ensure pseudo-element doesn't exceed bounds */
+    position: relative; 
 }
 
 main::before {
