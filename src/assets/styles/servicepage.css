@@ -79,7 +79,6 @@ h1::before {
 }
 
 .content {
-    /* height: 100%; */
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -88,7 +87,7 @@ h1::before {
 .content > * {
     /* flex: 1; */
     background-color: #f0f0f540;
-    width: 300px;
+    width: 350px;
     margin: 10px;
     border-radius: 10px;
     text-align: center;
@@ -100,6 +99,7 @@ h1::before {
     padding: 0;
     border-start-start-radius: 10px;
     border-start-end-radius: 10px;
+    color: #08092C;
 }
 
 ul {
@@ -127,4 +127,15 @@ li::after {
 
 li:last-child::after {
     background-color: #f0f0f500;
+}
+
+.content h4 {
+    background: #f0f0f5b6;
+    padding: 2%;
+    margin-bottom: 5%;
+    margin-inline: 30%;
+    display: flex;
+    color: #08092C;
+    justify-content: center;
+    border-radius: 50px;
 }

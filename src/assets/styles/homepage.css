@@ -5,47 +5,42 @@ main {
     transform: translate(-50%, -50%);
     width: 100%;
     display: flex;
-    align-items: center;
+    /* align-items: center; */
     justify-content: center;
     flex-direction: column;
-    gap: 1px;
     color: #f0f0f5;
     height: 100%;
     border-radius: 15px;
     padding: 2%;
 }
 
-h1 {
-    margin: 0;
+h1 {    
+    position: relative;
+    margin: 0 0 2px 0; /* Minimal space below H1 */
     padding: 0;
-    width: 100%;
-    text-align: left;
-
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 700;
     font-size: 100px;
-    line-height: 150px;
-
+    line-height: 100px; /* Tighten spacing within H1 */
+    text-align: left;
     background: linear-gradient(180deg, #FFFFFF 0%, #999999 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    /* text-fill-color: transparent; */
+    text-fill-color: transparent;
 }
 
 h2 {
-    margin: 0;
+    position: relative;
+    margin: 2px 0 0 0; /* Minimal space above H2 */
     padding: 0;
-    width: 100%;
-    text-align: right;
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 700;
     font-size: 96px;
-    line-height: 144px;
-    /* identical to box height */
-
+    line-height: 96px; /* Tighten spacing within H2 */
+    text-align: right;
     background: linear-gradient(103.88deg, #8A2BE2 -27.14%, #D32F2F 73.7%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -59,7 +54,7 @@ h3 {
     white-space: nowrap;
     text-wrap: wrap;
     overflow: hidden;
-    border-right: 2px solid black; /* Cursor */
+    border-right: 2px solid black;
     animation: blink 0.7s steps(2, start) infinite;
     left: 5%;
     top: 70%;
@@ -78,4 +73,3 @@ h3 {
         border-color: transparent;
     }
 }
-

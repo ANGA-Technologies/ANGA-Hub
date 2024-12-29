@@ -19,21 +19,21 @@
                     <ul>
                         <li v-for="item in currentServiceContent.basic" :key="item">{{ item }}</li>
                     </ul>
-                    <h5>From ${{ basicPrice }}</h5>
+                    <h4>From ${{ currentServiceContent.basicPrice }}</h4>
                 </div>
                 <div class="standard">
                     <h3>Standard</h3>
                     <ul>
                         <li v-for="item in currentServiceContent.standard" :key="item">{{ item }}</li>
                     </ul>
-                    <h5>From ${{ standardPrice }}</h5>
+                    <h4>From ${{ currentServiceContent.standardPrice }}</h4>
                 </div>
                 <div class="premium">
                     <h3>Premium</h3>
                     <ul>
                         <li v-for="item in currentServiceContent.premium" :key="item">{{ item }}</li>
                     </ul>
-                    <h5>From ${{ premiumPrice }}</h5>
+                    <h4>From ${{ currentServiceContent.premiumPrice }}</h4>
                 </div>
             </div>
         </main>
@@ -70,8 +70,8 @@
                             "Security & Testing"
                         ],
                         basicPrice: 449,
-                        standardPrice: 1199,
-                        premiumPrice: 3499
+                        standardPrice: 990,
+                        premiumPrice: 1099
                     },
                     consult: {
                         basic: [
@@ -92,29 +92,29 @@
                             "Advanced Domain Management"
                         ],
                         basicPrice: 199,
-                        standardPrice: 699,
-                        premiumPrice: 1899
+                        standardPrice: 549,
+                        premiumPrice: 1299
                     },
                     web: {
                         basic: [
                             "Simple Web Design",
                             "Basic CMS Setup",
                             "SEO (Basic)",
-                            "Website Maintenance"
+                            "WebApp Maintenance"
                         ],
                         standard: [
-                            "Custom Web Apps", 
-                            "E-Commerce WebApps (Standard)",
-                            "Responsive Web Designs", 
+                            "Custom WebApps", 
+                            "E-Commerce (Standard)",
+                            "Responsive Designs", 
                             "SEO (Standard)",
                             "Web Maintenance (Standard)"
                         ],
                         premium: [
-                            "Complex Web Apps",
-                            "Custom E-Commerce WebApps",
+                            "Complex WebApps",
+                            "Custom E-Commerce",
                             "Custom API Development",
                             "Advanced SEO (Premium)",
-                            "WebApp Redesign & Optimization",
+                            "Redesign & Optimization",
                             "Web Maintenance (Premium)"
                         ],
                         basicPrice: 349,
