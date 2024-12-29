@@ -1,0 +1,66 @@
+main {
+    margin: 0;
+    padding: 10px;
+    color: #F0F0F5;
+    width: 100%;
+    min-height: 100vh; /* Ensure full viewport height */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content horizontally */
+    justify-content: center; /* Center content vertically */
+    gap: 20px; /* Add spacing between children */
+    box-sizing: border-box;
+}
+
+h1 {
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 75px;
+    text-align: left;
+    background: linear-gradient(103.88deg, #8A2BE2 -27.14%, #D32F2F 73.7%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 5%;
+    position: relative;
+    display: inline-block; /* Ensure proper alignment */
+}
+
+h1::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 50%;
+    height: 2px;
+    background-color: #f0f0f5; /* Line color */
+}
+
+h1::before {
+    content: '';
+    position: absolute;
+    bottom: -9px; 
+    right: 50%;
+    width: 10px; 
+    height: 10px;
+    background-color: #f0f0f5;
+    transform: rotate(45deg);
+}
+
+.contact_info {
+    width: 380px;
+    height: 600px;
+    background: rgba(240, 240, 245, 0.15); /* Transparent for elegance */
+    border-radius: 30px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* Subtle professional shadow */
+    backdrop-filter: blur(10px); /* Frosted glass effect */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border */
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content inside */
+    justify-content: center; /* Center content vertically */
+}
