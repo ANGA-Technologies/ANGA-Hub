@@ -86,7 +86,10 @@ h1::before {
 
 .content > * {
     /* flex: 1; */
-    background-color: #f0f0f540;
+    background: rgba(240, 240, 245, 0.15); /* Transparent for elegance */
+    border-radius: 30px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* Subtle professional shadow */
+    backdrop-filter: blur(10px);
     width: 350px;
     margin: 10px;
     border-radius: 10px;
