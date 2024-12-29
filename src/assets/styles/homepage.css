@@ -9,6 +9,10 @@ main {
     justify-content: center;
     flex-direction: column;
     gap: 1px;
+    color: #f0f0f5;
+    height: 100%;
+    border-radius: 15px;
+    padding: 2%;
 }
 
 h1 {

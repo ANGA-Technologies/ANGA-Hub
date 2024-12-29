@@ -11,7 +11,7 @@ body {
     /* overflow: hidden; */
 }
 
-body::after {
+body::before {
     content: '';
     position: fixed;
     width: 500px;
@@ -24,6 +24,7 @@ body::after {
     filter: blur(100px);
     animation: fade 5s infinite;
 }
+
 
 header {
     margin: 0;
@@ -138,13 +139,6 @@ li span {
 /* Mobile Styles */
 @media (max-width: 500px) {
 
-    /* body::after {
-        width: 539.44px;
-        height: 414.62px;
-        left: -10%;
-        top: 75.45px;
-    } */
-
     .menu-toggle {
         display: block;
         z-index: 1999;
@@ -188,18 +182,9 @@ li span {
 
 }
 
-main {
-    text-align: center;
-    color: #f0f0f5;
-    height: 100%;
-    border-radius: 15px;
-    padding: 2%;
-    position: relative; 
-}
-
-main::before {
+body::after {
     content: ""; /* Empty content to create a visual element */
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -209,11 +194,11 @@ main::before {
     background-position: center; /* Center the image */
     background-repeat: no-repeat;
     opacity: 0.4; /* Adjust the opacity of the background image */
-    z-index: -1; /* Place behind the main content */
+    z-index: -1;
 }
 
 .background {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -221,11 +206,9 @@ main::before {
     background-image:
         linear-gradient(90deg, rgba(255, 255, 255, 0.1) 2px, transparent 1px),
         linear-gradient(rgba(255, 255, 255, 0.1) 2px, transparent 1px);
-        /* url('anga-hub/src/assets/images/africa.png');  */
     background-size: 100px 100px, 100px 100px, auto;
     background-position: center;
-    z-index: 5;
-
+    z-index: -1;
     -webkit-mask-image: 
         linear-gradient(to bottom, transparent, black 20%, black 80%, transparent), /* Vertical transparency */
         linear-gradient(to right, transparent, black 20%, black 80%, transparent); /* Horizontal transparency */
