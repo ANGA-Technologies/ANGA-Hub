@@ -8,6 +8,7 @@
 
 body {
     background: #040828;
+    /* position: relative; */
     /* overflow: hidden; */
 }
 
@@ -125,19 +126,45 @@ li span {
     }
 }
 
-
-/* Tablet Sytle */
-
-@media (max-width: 800px) {
-    nav ul {
-        flex-direction: row;
-        
-    }
-}
-
-
 /* Mobile Styles */
-@media (max-width: 500px) {
+@media (max-width: 700px) {
+
+    body::after {
+        content: ""; /* Empty content to create a visual element */
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url("@/assets/images/africa.png");
+        background-size: 115% auto; /* Ensure the image covers the area */
+        background-position: center; /* Center the image */
+        background-repeat: no-repeat;
+        opacity: 0.4; /* Adjust the opacity of the background image */
+        z-index: -1;
+    }
+
+    .background {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image:
+            linear-gradient(90deg, rgba(255, 255, 255, 0.1) 2px, transparent 1px),
+            linear-gradient(rgba(255, 255, 255, 0.1) 2px, transparent 1px);
+        background-size: 100px 100px, 100px 100px, auto;
+        background-position: center;
+        z-index: -1;
+        -webkit-mask-image: 
+            linear-gradient(to bottom, transparent, black 20%, black 80%, transparent), /* Vertical transparency */
+            linear-gradient(to right, transparent, black 20%, black 80%, transparent); /* Horizontal transparency */
+        mask-image: 
+            linear-gradient(to bottom, transparent, black 20%, black 80%, transparent), /* Vertical transparency */
+            linear-gradient(to right, transparent, black 20%, black 80%, transparent); /* Horizontal transparency */
+        -webkit-mask-composite: intersect;
+        mask-composite: intersect;
+    }
 
     .menu-toggle {
         display: block;
@@ -182,39 +209,32 @@ li span {
 
 }
 
-body::after {
-    content: ""; /* Empty content to create a visual element */
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url("@/assets/images/africa.png");
-    background-size: 115% auto; /* Ensure the image covers the area */
-    background-position: center; /* Center the image */
-    background-repeat: no-repeat;
-    opacity: 0.4; /* Adjust the opacity of the background image */
-    z-index: -1;
-}
+@media (min-width: 701px) {
 
-.background {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image:
-        linear-gradient(90deg, rgba(255, 255, 255, 0.1) 2px, transparent 1px),
-        linear-gradient(rgba(255, 255, 255, 0.1) 2px, transparent 1px);
-    background-size: 100px 100px, 100px 100px, auto;
-    background-position: center;
-    z-index: -1;
-    -webkit-mask-image: 
-        linear-gradient(to bottom, transparent, black 20%, black 80%, transparent), /* Vertical transparency */
-        linear-gradient(to right, transparent, black 20%, black 80%, transparent); /* Horizontal transparency */
-    mask-image: 
-        linear-gradient(to bottom, transparent, black 20%, black 80%, transparent), /* Vertical transparency */
-        linear-gradient(to right, transparent, black 20%, black 80%, transparent); /* Horizontal transparency */
-    -webkit-mask-composite: intersect;
-    mask-composite: intersect;
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    html, body, #app {
+        height: 100%;
+        overflow: hidden;
+    }
+      
+    .container {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+
+    header {
+        background: none;
+        box-shadow: none;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem;
+        flex-shrink: 0;
+    }
 }

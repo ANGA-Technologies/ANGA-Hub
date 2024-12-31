@@ -1,11 +1,15 @@
 <template>
-  <router-view>
-    <main>
+  <main>
+    <div class="text">
       <h1>ANGA</h1>
       <h2>HUB</h2>
-      <h3>{{ displayText }}</h3>
-    </main>
-  </router-view>
+      <h3> > {{ displayText }}</h3>      
+    </div>
+    <div class="africa-map">
+      <img src="@/assets/images/africa.png" alt="Africa Map" />
+    </div>
+    <div class="main-background"></div>
+  </main>
 </template>
 
 <script>
