@@ -221,6 +221,11 @@ li span {
         height: 100%;
         overflow: hidden;
     }
+
+    body::before {
+        width: 600px;
+        height: 700px;
+    }
       
     .container {
         display: flex;

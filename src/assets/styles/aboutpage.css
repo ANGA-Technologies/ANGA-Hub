@@ -1,7 +1,21 @@
 main {
-    margin: 0;
+    margin: 1%;
     text-align: left;
     color: #F0F0F5;
+    overflow: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
+    scrollbar-color: #D32F2F transparent;
+}
+
+main::-webkit-scrollbar-thumb {
+    background-color: #D32F2F;
+    border-radius: 50px;
+}
+
+main::-webkit-scrollbar-track {
+    background-color: transparent;
+    border-radius: 50px;
 }
 
 h1 {
@@ -15,22 +29,51 @@ h1 {
     position: relative;
 }
 
-
-
 h2 {
     font-size: 35px;
-    padding-left: 20px;
+    position: relative;
+    display: inline-block;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    bottom: -5px;
+    width: 50%;
+    height: 2px;
+    background-color: #f0f0f5; /* Line color */
+}
+
+h2#mission::after {
+    left: 75%;
+    width: 20%;
+}
+
+.vision {
+    text-align: center;
+}
+
+h2#vision::after {
+    left: 50%;
+    width: 60%;
+}
+
+h2#core::after {
+    left: 65%;
+    width: 30%;
 }
 
 p {
     font-size: 20px;
     text-align: justify;
-    padding: 1rem;
+    padding: 4rem;
 }
 
 ul {
     font-size: 18px;
-    padding: 1rem;
+    padding: 4rem;
     margin-left: 10px;
 }
 
@@ -42,7 +85,9 @@ ul {
     padding: 20px;
 }
 
-circle {
+
+
+.circle {
     width: 150px;
     height: 150px;
     border-radius: 50%;
@@ -80,8 +125,6 @@ circle {
     box-shadow: 0 0 15px 5px rgba(138, 43, 226, 0.8); 
 }
 
-
-
 /* Responsive design for smaller screens */
 @media (max-width: 500px) {
     h1 {
@@ -115,10 +158,6 @@ circle {
         padding: 15px 15px;
     }
 
-    .vision h2 {
-        text-align: right;
-    }
-
     p {
         font-size: 16px;
         padding: 0.8rem;
@@ -134,44 +173,40 @@ circle {
         gap: 30px;
         padding: 20px;
     }
+    
+}
 
-    .circle {
-        width: 150px;
-        height: 150px;
-        border-radius: 50%;
-        background-color: rgba(138, 43, 226, 0.2); /* Semi-transparent background */
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow */
-        color: #fff;
+@media (min-width: 701px) {
+    h2#mission::after {
+        padding-left: 10%;
+    }
+
+    h2#mission {
+        text-align: left;
+        padding-left: 10%;
+    }
+
+    h2#vision {
         text-align: center;
-        overflow: hidden;
-        padding: 10px;
-        transition: box-shadow 0.3s ease, background-color 0.3s ease; /* Smooth transitions */
     }
-    
-    .circle img {
-        width: 80%;
-        height: auto;
-        margin-bottom: 5px;
-        object-fit: contain;
+
+    p#vision {
+        text-align: center;
+        padding-inline: 10em;
     }
-    
-    .circle h3 {
-        font-size: 16px;
-        margin: 0;
-        padding: 0;
-        line-height: 1.2;
-        word-wrap: break-word;
+
+    h2#core {
+        text-align: left;
+        padding-left: 10%;
     }
-    
-    /* Hover Effect */
-    .circle:hover {
-        background-color: rgba(138, 43, 226, 0.4); 
-        box-shadow: 0 0 15px 5px rgba(138, 43, 226, 0.8); 
+
+    .corevalues {
+        gap: 30px;
+        margin: 7%;
+        padding: 20px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
     }
-    
-    
 }
