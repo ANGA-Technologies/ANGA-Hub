@@ -101,7 +101,8 @@ ul {
     text-align: center;
     overflow: hidden;
     padding: 10px;
-    transition: box-shadow 0.3s ease, background-color 0.3s ease; /* Smooth transitions */
+    transition: box-shadow 0.3s ease, background-color 0.3s ease;
+    cursor: default;
 }
 
 .circle img {
