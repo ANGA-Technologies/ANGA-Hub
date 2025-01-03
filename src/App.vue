@@ -2,7 +2,7 @@
   <div id="app" class="container">
     <header>
       <div class="logo">
-        <img src="@/assets/images/Logo 3.0.png" alt="Logo" />
+        <img src="@/assets/logo.png" alt="Logo" />
       </div>
       <div class="menu-toggle" @click="toggleMenu">
         <div v-if="!isMenuOpen" class="menu-icon">☰</div>

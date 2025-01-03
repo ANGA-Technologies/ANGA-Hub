@@ -291,8 +291,8 @@ button:hover{
 }
 
 .modal-content button {
-    margin: 20px auto 0; /* Add margin to the top and auto to center horizontally */
-    display: block; /* Make it a block element so margin auto works */
+    margin: 20px auto 0; 
+    display: block;
 }
 
 

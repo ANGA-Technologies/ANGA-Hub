@@ -8,8 +8,6 @@
 
 body {
     background: #040828;
-    /* position: relative; */
-    /* overflow: hidden; */
 }
 
 body::before {
@@ -29,13 +27,15 @@ body::before {
 
 header {
     margin: 0;
+    padding: 1%;
+    /* padding-inline: 150px 150px; */
+    padding-inline: 10% 10%;
     position: sticky;
     top: -1px;
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
     z-index: 10;
     color: #F0F0F5;
     background: #040828;
@@ -44,10 +44,10 @@ header {
 
 .logo {
     font-size: 1.5em;
-    width: 70px;
-    height: 70px;
+    width: 120px;
+    height: 120px;
     color: #ffffff;
-    background-color: #ffffff;
+    /* background-color: #ffffff; */
     border-radius: 10px;
 }
 
@@ -64,7 +64,8 @@ nav ul {
 }
 
 nav ul li {
-    margin: 0 10px;
+    /* margin: 0 10px; */
+    margin-inline: 30px;
 }
 
 nav ul li a {
@@ -126,6 +127,16 @@ li span {
     }
 }
 
+@media (max-width: 1000px) {
+    header {
+        padding-inline: 1%;
+    }
+
+    nav ul li{
+        margin-inline: 15px;
+    }
+}
+
 /* Mobile Styles */
 @media (max-width: 700px) {
 
@@ -142,6 +153,15 @@ li span {
         background-repeat: no-repeat;
         opacity: 0.4; /* Adjust the opacity of the background image */
         z-index: -1;
+    }
+
+    header {
+        padding-inline: 20px;
+    }
+
+    .logo {
+        width: 80px;
+        height: 80px;
     }
 
     .background {
@@ -239,7 +259,7 @@ li span {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 1rem;
+        /* padding: 1rem; */
         flex-shrink: 0;
     }
 }
