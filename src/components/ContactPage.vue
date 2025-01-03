@@ -12,7 +12,7 @@
                 <div class="links">
                     <a href="https://x.com/angahub" target="_blank"><img src="@/assets/images/x.png" /></a>
                     <a href="https://www.linkedin.com/company/angahub" target="_blank"><img src="@/assets/images/linkedin.png" /></a>
-                    <a href="" target="_blank"><img src="@/assets/images/whatsapp.png" /></a>
+                    <a href="https://wa.link/9c0dh4" target="_blank"><img src="@/assets/images/whatsapp.png" /></a>
                 </div>
             </div>
             <div class="forms">
