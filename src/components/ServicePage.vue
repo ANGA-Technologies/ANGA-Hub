@@ -1,34 +1,35 @@
 <template>
-    <router-view>
-        <main>
-            <h1>Services</h1>
-            <div class="options">
-                <div @click="setService('mobile')" class="mobile" :class="{ active: currentService === 'mobile' }">
+    <div class="service-page">
+        <h1>Services</h1>
+        <div class="service-container">
+            <div class="service-options">
+                <div @click="setService('mobile')" class="option-card mobile" :class="{ active: currentService === 'mobile' }">
                     <h5>Mobile Apps</h5>
                 </div>
-                <div @click="setService('consult')" class="consult" :class="{ active: currentService === 'consult' }">
+                <div @click="setService('consult')" class="option-card consult" :class="{ active: currentService === 'consult' }">
                     <h5>Pages & Consults</h5>
                 </div>
-                <div @click="setService('web')" class="web" :class="{ active: currentService === 'web' }">
+                <div @click="setService('web')" class="option-card web" :class="{ active: currentService === 'web' }">
                     <h5>Web Apps</h5>
                 </div>
             </div>
-            <div class="content" v-if="currentService">
-                <div class="basic">
+            
+            <div class="service-content" v-if="currentService">
+                <div class="service-card basic">
                     <h3>Basic</h3>
                     <ul>
                         <li v-for="item in currentServiceContent.basic" :key="item">{{ item }}</li>
                     </ul>
                     <h4>From ${{ currentServiceContent.basicPrice }}</h4>
                 </div>
-                <div class="standard">
+                <div class="service-card standard">
                     <h3>Standard</h3>
                     <ul>
                         <li v-for="item in currentServiceContent.standard" :key="item">{{ item }}</li>
                     </ul>
                     <h4>From ${{ currentServiceContent.standardPrice }}</h4>
                 </div>
-                <div class="premium">
+                <div class="service-card premium">
                     <h3>Premium</h3>
                     <ul>
                         <li v-for="item in currentServiceContent.premium" :key="item">{{ item }}</li>
@@ -36,8 +37,8 @@
                     <h4>From ${{ currentServiceContent.premiumPrice }}</h4>
                 </div>
             </div>
-        </main>
-    </router-view>
+        </div>
+    </div>
 </template>
     
 <script>

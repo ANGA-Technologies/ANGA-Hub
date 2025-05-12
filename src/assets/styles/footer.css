@@ -4,6 +4,7 @@
   padding: 40px 0 20px;
   width: 100%;
   font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 0.5s ease, transform 0.5s ease;
@@ -137,8 +138,8 @@
   background-color: #25D366;
 }
 
-.social-icon.instagram:hover {
-  background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D);
+.social-icon.x:hover {
+  background-color: #000000;
 }
 
 .social-icon.email:hover {

@@ -26,7 +26,7 @@
         <div class="social-icons">
           <a href="https://wa.link/9c0dh4" target="_blank" class="social-icon whatsapp"><img src="@/assets/images/whatsapp.png" alt="WhatsApp" /></a>
           <a href="https://www.linkedin.com/company/angahub" target="_blank" class="social-icon linkedin"><img src="@/assets/images/linkedin.png" alt="LinkedIn" /></a>
-          <a href="#" class="social-icon instagram"><img src="@/assets/images/instagram.png" alt="Instagram" /></a>
+          <a href="#" class="social-icon x"><img src="@/assets/images/x.png" alt="X" /></a>
           <a href="mailto:info@angahub.com" class="social-icon email"><img src="@/assets/images/mail.png" alt="Email" /></a>
         </div>
       </div>
