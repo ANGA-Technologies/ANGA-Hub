@@ -16,7 +16,7 @@
 }
 
 @media (max-width: 700px) {
-    main {
+    .home-container {
         top: 55%;
         left: 50%;
         transform: translate(-50%, -50%);
@@ -31,7 +31,7 @@
         padding-top: 5%;
     }
 
-    h1 {    
+    .home-container h1 {    
         position: relative;
         margin: 0 0 2px 0; /* Minimal space below H1 */
         padding: 0;
@@ -48,7 +48,7 @@
         text-fill-color: transparent;
     }
     
-    h2 {
+    .home-container h2 {
         position: relative;
         margin: 2px 0 0 0;
         padding: 0;
@@ -65,7 +65,7 @@
         text-fill-color: transparent;
     }
     
-    h3 {
+    .home-container h3 {
         display: inline-block;
         font-family: 'Poppins';
         white-space: nowrap;
@@ -94,7 +94,7 @@
 
 @media (min-width: 701px) {
 
-    main {
+    .home-container {
         margin: 40px 70px;
         width: 1200px;
         /* margin: 5% 1% 1% 1%; */
@@ -112,28 +112,25 @@
         scrollbar-color: transparent transparent;
         padding-top: 3%;
     }
-
-    .home-container {
-        
     
-    main::-webkit-scrollbar-thumb {
+    .home-container::-webkit-scrollbar-thumb {
         background-color: transparent;
         border-radius: 50px;
     }
     
-    main::-webkit-scrollbar-track {
+    .home-container::-webkit-scrollbar-track {
         background-color: transparent;
         border-radius: 50px;
     }
       
-    main .text {
+    .home-container .text {
         flex: 1;
         color: white;
         text-align: center;
         padding: 20px;
     }
 
-    h1 {
+    .home-container h1 {
         font-weight: 700;
         font-size: 150px;
         line-height: 120px;
@@ -144,7 +141,7 @@
         text-fill-color: transparent;
     }
 
-    h2 {
+    .home-container h2 {
         font-weight: 700;
         font-size: 130px;
         line-height: 100px;
@@ -156,7 +153,7 @@
         text-fill-color: transparent;
     }
       
-    h3 {
+    .home-container h3 {
         padding: 5% 0 0 0;
         color: #f0f0f5;
         z-index: 10;

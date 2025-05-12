@@ -1,5 +1,5 @@
 <template>
-  <div id="app" class="container">
+  <div id="app">
     <header :class="{ 'scrolled': isScrolled }">
       <div class="logo">
         <img src="@/assets/logo.png" alt="Logo" />
@@ -63,17 +63,26 @@
         </ul>
       </div>
     </header>
-    <router-view></router-view>
+    <main class="page-container">
+      <router-view></router-view>
+    </main>
+    <footer-component :class="{ 'visible': showFooter }"></footer-component>
     <div class="background"></div>
   </div>
 </template>
 
 <script>
+import FooterComponent from '@/components/FooterComponent.vue';
+
 export default {
+  components: {
+    FooterComponent
+  },
   data() {
     return {
       isMenuOpen: false,
-      isScrolled: false
+      isScrolled: false,
+      showFooter: false
     };
   },
   mounted() {
@@ -94,6 +103,14 @@ export default {
     },
     handleScroll() {
       this.isScrolled = window.scrollY > 50;
+      
+      // Show footer when scrolled near the bottom of the page
+      const scrollPosition = window.scrollY;
+      const windowHeight = window.innerHeight;
+      const documentHeight = document.documentElement.scrollHeight;
+      
+      // Show footer when scrolled more than 60% down the page
+      this.showFooter = scrollPosition > (documentHeight - windowHeight) * 0.4;
     }
   },
 };

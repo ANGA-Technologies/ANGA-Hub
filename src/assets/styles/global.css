@@ -6,8 +6,15 @@
     padding: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background: #040828;
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
 }
 
 body::before {
@@ -24,11 +31,25 @@ body::before {
     animation: fade 5s infinite;
 }
 
+/* Main layout structure */
+#app {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.page-container {
+    flex: 1;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+    position: relative;
+}
 
 header {
     margin: 0;
     padding: 1%;
-    /* padding-inline: 150px 150px; */
     padding-inline: 10% 10%;
     position: sticky;
     top: -1px;
@@ -90,8 +111,6 @@ nav ul li a {
 .menu-toggle:active {
     animation: rotate .5s;
 }
-
-
 
 li span {
     display: flex;
@@ -226,40 +245,24 @@ li span {
     nav ul li {
         margin: 20px 0;
     }
-
 }
 
 @media (min-width: 701px) {
-
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-    
-    html, body, #app {
-        height: 100%;
-        overflow: hidden;
-    }
-
     body::before {
         width: 600px;
         height: 700px;
     }
-      
-    .container {
-        display: flex;
-        flex-direction: column;
-        height: 100%;
-    }
-
+    
     header {
         background: none;
         box-shadow: none;
         display: flex;
         align-items: center;
         justify-content: space-between;
-        /* padding: 1rem; */
         flex-shrink: 0;
+    }
+    
+    .page-container {
+        padding: 40px;
     }
 }
