@@ -138,26 +138,42 @@ export default {
     async handleSubmit() {
       const form = document.getElementById('contactForm');
       const formData = new FormData(form);
+      
+      // Create a data object from the form data
+      const formDataObj = {};
+      formData.forEach((value, key) => {
+        formDataObj[key] = value;
+      });
 
       try {
-        const response = await fetch('https://formspree.io/f/mgvvnbgl', {
+        // Use our secure backend API instead of directly submitting to Formspree
+        const apiUrl = process.env.NODE_ENV === 'production' 
+          ? '/api/contact' 
+          : 'http://localhost:3000/api/contact';
+          
+        const response = await fetch(apiUrl, {
           method: 'POST',
           headers: {
+            'Content-Type': 'application/json',
             'Accept': 'application/json',
           },
-          body: formData,
+          body: JSON.stringify(formDataObj),
+          credentials: 'same-origin' // Important for security
         });
 
-        if (response.ok) {
+        const data = await response.json();
+
+        if (response.ok && data.success) {
           this.modalMessage = 'Thank you for your message! We will get back to you soon.';
           this.modalSuccess = true;
           form.reset(); // Clear the form
         } else {
-          this.modalMessage = 'Oops! Something went wrong. Please try again.';
+          this.modalMessage = data.message || 'Oops! Something went wrong. Please try again.';
           this.modalSuccess = false;
         }
       } catch (error) {
-        this.modalMessage = 'An error occurred: ' + error.message;
+        console.error('Form submission error:', error);
+        this.modalMessage = 'An error occurred while submitting the form. Please try again later.';
         this.modalSuccess = false;
       }
 
