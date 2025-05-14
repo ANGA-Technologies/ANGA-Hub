@@ -344,19 +344,30 @@ input[type="radio"] {
     color: #555555;
 }
 
-.submit-button {
+.recaptcha-container {
+    margin-top: 20px;
+}
+
+.recaptcha-error {
+    color: #D32F2F;
     margin-top: 10px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.submit-button {
+    margin-top: 20px;
     padding: 15px 30px;
     background: linear-gradient(103.88deg, #8A2BE2 0%, #D32F2F 100%);
     color: white;
     border: none;
-    border-radius: 8px;
+    border-radius: 30px;
     font-size: 16px;
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
-    align-self: flex-start;
-    box-shadow: 0 4px 15px rgba(138, 43, 226, 0.2);
+    width: 100%;
+    max-width: 250px;
 }
 
 .submit-button:hover {

@@ -106,6 +106,11 @@
                         <textarea id="message" name="message" placeholder="Write your message here..." required></textarea>
                     </div>
                     
+                    <div class="form-group recaptcha-container">
+                        <div ref="recaptcha" class="g-recaptcha" data-sitekey="6Lcu7DcrAAAAAOWhkI-XaibtaLPcjRqCavHgeDsT"></div>
+                        <div v-if="recaptchaError" class="recaptcha-error">Please complete the reCAPTCHA verification</div>
+                    </div>
+                    
                     <button type="submit" class="submit-button">Send Message</button>
                 </form>
             </div>
@@ -132,10 +137,39 @@ export default {
       showModal: false,
       modalMessage: '',
       modalSuccess: true, // To style the modal based on success or error
+      recaptchaError: false,
+      recaptchaLoaded: false
     };
+  },
+  mounted() {
+    // Load Google reCAPTCHA script
+    if (!document.getElementById('recaptcha-script')) {
+      const recaptchaScript = document.createElement('script');
+      recaptchaScript.setAttribute('id', 'recaptcha-script');
+      recaptchaScript.setAttribute('src', 'https://www.google.com/recaptcha/api.js');
+      recaptchaScript.setAttribute('async', 'true');
+      recaptchaScript.setAttribute('defer', 'true');
+      document.head.appendChild(recaptchaScript);
+      
+      recaptchaScript.onload = () => {
+        this.recaptchaLoaded = true;
+      };
+    } else {
+      this.recaptchaLoaded = true;
+    }
   },
   methods: {
     async handleSubmit() {
+      // Reset recaptcha error state
+      this.recaptchaError = false;
+      
+      // Verify reCAPTCHA
+      const recaptchaResponse = window.grecaptcha && window.grecaptcha.getResponse();
+      if (!recaptchaResponse) {
+        this.recaptchaError = true;
+        return; // Stop form submission if reCAPTCHA is not completed
+      }
+      
       const form = document.getElementById('contactForm');
       const formData = new FormData(form);
       
@@ -144,6 +178,9 @@ export default {
       formData.forEach((value, key) => {
         formDataObj[key] = value;
       });
+      
+      // Add the reCAPTCHA response to the form data
+      formDataObj['g-recaptcha-response'] = recaptchaResponse;
 
       try {
         // Use our secure backend API instead of directly submitting to Formspree
