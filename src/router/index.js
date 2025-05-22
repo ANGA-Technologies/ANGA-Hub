@@ -5,6 +5,10 @@ import AboutUsPage from '@/components/AboutUsPage.vue';
 import SupportPage from '@/components/SupportPage.vue';
 import ServicePage from '@/components/ServicePage.vue';
 import ContactPage from '@/components/ContactPage.vue';
+import SecurityPage from '@/components/SecurityPage.vue';
+import SSLCertificatesPage from '@/components/SSLCertificatesPage.vue';
+import EmailScanningPage from '@/components/EmailScanningPage.vue';
+import WebsiteSecurityPage from '@/components/WebsiteSecurityPage.vue';
 
 const routes = [
   {
@@ -43,22 +47,22 @@ const routes = [
   {
     path: '/security',
     name: 'Security',
-    component: ServicePage, // Using ServicePage as a template for now
+    component: SecurityPage,
   },
   {
     path: '/security/ssl-certificates',
     name: 'SSLCertificates',
-    component: ServicePage, // Using ServicePage as a template for now
+    component: SSLCertificatesPage,
   },
   {
     path: '/security/email-scanning',
     name: 'EmailScanning',
-    component: ServicePage, // Using ServicePage as a template for now
+    component: EmailScanningPage,
   },
   {
     path: '/security/website-security',
     name: 'WebsiteSecurity',
-    component: ServicePage, // Using ServicePage as a template for now
+    component: WebsiteSecurityPage,
   },
   // Contact
   {
