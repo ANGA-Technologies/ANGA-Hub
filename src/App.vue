@@ -12,10 +12,14 @@
               <span class="nav-text">HOME</span>
             </router-link>
           </li>
-          <li>
-            <router-link to="/about" class="nav-link">
-              <span class="nav-text">ABOUT</span>
+          <li class="has-dropdown">
+            <router-link to="/company" class="nav-link">
+              <span class="nav-text">COMPANY</span>
             </router-link>
+            <div class="dropdown-menu">
+              <router-link to="/company/about-us" class="dropdown-item">About Us</router-link>
+              <router-link to="/company/support" class="dropdown-item">Support</router-link>
+            </div>
           </li>
           <li class="has-dropdown">
             <router-link to="/services" class="nav-link">
@@ -47,6 +51,16 @@
               </div>
             </div>
           </li>
+          <li class="has-dropdown">
+            <router-link to="/security" class="nav-link">
+              <span class="nav-text">SECURITY</span>
+            </router-link>
+            <div class="dropdown-menu">
+              <router-link to="/security/ssl-certificates" class="dropdown-item">SSL Certificates</router-link>
+              <router-link to="/security/email-scanning" class="dropdown-item">Email Scanning & Filtering</router-link>
+              <router-link to="/security/website-security" class="dropdown-item">Website Security & Malware Protection</router-link>
+            </div>
+          </li>
           <li>
             <router-link to="/contact" class="nav-link">
               <span class="nav-text">CONTACT</span>
@@ -70,10 +84,17 @@
               <span class="nav-text">HOME</span>
             </router-link>
           </li>
-          <li>
-            <router-link to="/about" @click="closeMenu">
-              <span class="nav-text">ABOUT</span>
-            </router-link>
+          <li class="mobile-dropdown">
+            <div class="mobile-dropdown-header" @click="toggleMobileSubmenu('company')">
+              <router-link to="/company" @click.stop="closeMenu">
+                <span class="nav-text">COMPANY</span>
+              </router-link>
+              <span class="dropdown-arrow" :class="{ 'open': mobileSubmenuOpen === 'company' }">▼</span>
+            </div>
+            <div class="mobile-submenu" :class="{ 'open': mobileSubmenuOpen === 'company' }">
+              <router-link to="/company/about-us" @click="closeMenu">About Us</router-link>
+              <router-link to="/company/support" @click="closeMenu">Support</router-link>
+            </div>
           </li>
           <li class="mobile-dropdown">
             <div class="mobile-dropdown-header" @click="toggleMobileSubmenu('services')">
@@ -115,6 +136,19 @@
                   <router-link to="/services/ai-prompt-support" @click="closeMenu">AI Prompt Support</router-link>
                 </div>
               </div>
+            </div>
+          </li>
+          <li class="mobile-dropdown">
+            <div class="mobile-dropdown-header" @click="toggleMobileSubmenu('security')">
+              <router-link to="/security" @click.stop="closeMenu">
+                <span class="nav-text">SECURITY</span>
+              </router-link>
+              <span class="dropdown-arrow" :class="{ 'open': mobileSubmenuOpen === 'security' }">▼</span>
+            </div>
+            <div class="mobile-submenu" :class="{ 'open': mobileSubmenuOpen === 'security' }">
+              <router-link to="/security/ssl-certificates" @click="closeMenu">SSL Certificates</router-link>
+              <router-link to="/security/email-scanning" @click="closeMenu">Email Scanning & Filtering</router-link>
+              <router-link to="/security/website-security" @click="closeMenu">Website Security & Malware Protection</router-link>
             </div>
           </li>
           <li>
