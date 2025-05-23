@@ -1,0 +1,329 @@
+/* SSL Certificates Page Styles */
+.ssl-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    color: #F0F0F5;
+}
+
+.ssl-page h1, .ssl-page h2, .ssl-page h3 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.ssl-page h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    background: linear-gradient(103.88deg, #8A2BE2 0%, #D32F2F 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-align: center;
+}
+
+.ssl-page h2 {
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+    color: #F0F0F5;
+}
+
+.ssl-page h3 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    color: #F0F0F5;
+}
+
+.ssl-page p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.ssl-page section {
+    margin-bottom: 80px;
+}
+
+/* Hero Section */
+.ssl-hero {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.tagline {
+    font-size: 1.3rem;
+    max-width: 700px;
+    margin: 0 auto;
+    opacity: 0.9;
+}
+
+/* SSL Overview */
+.ssl-overview {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    align-items: center;
+    background: rgba(25, 25, 65, 0.3);
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.overview-content {
+    flex: 1;
+    min-width: 300px;
+}
+
+.ssl-visual {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ssl-icon {
+    font-size: 4rem;
+    color: #8A2BE2;
+    margin-bottom: 20px;
+}
+
+.ssl-browser {
+    width: 100%;
+    max-width: 400px;
+    background: rgba(15, 15, 35, 0.5);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.browser-bar {
+    background: rgba(35, 35, 55, 0.8);
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.padlock {
+    color: #4CAF50;
+    margin-right: 10px;
+}
+
+.url {
+    color: #4CAF50;
+    font-family: monospace;
+}
+
+.browser-content {
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.secure-badge {
+    display: flex;
+    align-items: center;
+    background: rgba(76, 175, 80, 0.1);
+    padding: 10px 20px;
+    border-radius: 50px;
+    border: 1px solid rgba(76, 175, 80, 0.3);
+}
+
+.badge-icon {
+    color: #4CAF50;
+    margin-right: 10px;
+}
+
+.badge-text {
+    color: #4CAF50;
+    font-weight: 500;
+}
+
+/* SSL Benefits */
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.benefit-card {
+    background: rgba(25, 25, 65, 0.3);
+    border-radius: 10px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.benefit-card:hover {
+    transform: translateY(-10px);
+}
+
+.benefit-icon {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #8A2BE2;
+}
+
+/* SSL Types */
+.types-container {
+    margin-top: 40px;
+}
+
+.type-item {
+    background: rgba(25, 25, 65, 0.3);
+    border-radius: 10px;
+    padding: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.type-item:hover {
+    transform: translateX(10px);
+}
+
+.type-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.type-icon {
+    font-size: 2.5rem;
+    color: #8A2BE2;
+    margin-right: 20px;
+}
+
+.type-details {
+    margin-top: 15px;
+}
+
+.type-features {
+    margin-top: 15px;
+    margin-left: 20px;
+}
+
+.type-features li {
+    margin-bottom: 8px;
+    position: relative;
+    padding-left: 5px;
+}
+
+.type-features li::before {
+    content: "•";
+    color: #8A2BE2;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+/* Implementation Process */
+.process-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.step-card {
+    background: rgba(25, 25, 65, 0.3);
+    border-radius: 10px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: transform 0.3s ease;
+    position: relative;
+}
+
+.step-card:hover {
+    transform: translateY(-10px);
+}
+
+.step-number {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(103.88deg, #8A2BE2 0%, #D32F2F 100%);
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.step-icon {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #8A2BE2;
+}
+
+/* CTA Section */
+.cta-section {
+    background: linear-gradient(135deg, rgba(138, 43, 226, 0.2) 0%, rgba(211, 47, 47, 0.2) 100%);
+    border-radius: 15px;
+    padding: 60px 40px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.cta-content {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.cta-button {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 15px 40px;
+    background: linear-gradient(103.88deg, #8A2BE2 0%, #D32F2F 100%);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+    .ssl-overview {
+        flex-direction: column;
+    }
+    
+    .benefits-grid,
+    .process-steps {
+        grid-template-columns: 1fr;
+    }
+    
+    .ssl-browser {
+        max-width: 100%;
+    }
+    
+    .ssl-page h1 {
+        font-size: 2.5rem;
+    }
+    
+    .tagline {
+        font-size: 1.1rem;
+    }
+    
+    .cta-section {
+        padding: 40px 20px;
+    }
+}
