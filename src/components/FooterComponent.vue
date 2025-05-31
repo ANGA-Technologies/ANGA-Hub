@@ -33,6 +33,11 @@
     </div>
     
     <div class="footer-bottom">
+      <div class="footer-links">
+        <router-link to="/cookies">Cookies</router-link>
+        <router-link to="/privacy-policy">Privacy Policy</router-link>
+        <router-link to="/terms-and-conditions">Terms and Conditions</router-link>
+      </div>
       <p>&copy; {{ new Date().getFullYear() }} ANGA Hub LTD. All Rights Reserved.</p>
     </div>
   </footer>
