@@ -9,6 +9,9 @@ import SecurityPage from '@/components/SecurityPage.vue';
 import SSLCertificatesPage from '@/components/SSLCertificatesPage.vue';
 import EmailScanningPage from '@/components/EmailScanningPage.vue';
 import WebsiteSecurityPage from '@/components/WebsiteSecurityPage.vue';
+import CookiesPage from '@/components/CookiesPage.vue';
+import PrivacyPolicyPage from '@/components/PrivacyPolicyPage.vue';
+import TermsAndConditionsPage from '@/components/TermsAndConditionsPage.vue';
 
 const routes = [
   {
@@ -69,6 +72,22 @@ const routes = [
     path: '/contact',
     name: 'Contact',
     component: ContactPage,
+  },
+  // Legal Pages
+  {
+    path: '/cookies',
+    name: 'Cookies',
+    component: CookiesPage,
+  },
+  {
+    path: '/privacy-policy',
+    name: 'PrivacyPolicy',
+    component: PrivacyPolicyPage,
+  },
+  {
+    path: '/terms-and-conditions',
+    name: 'TermsAndConditions',
+    component: TermsAndConditionsPage,
   },
 ];
 
