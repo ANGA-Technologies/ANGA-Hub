@@ -114,7 +114,6 @@ export default {
   mounted() {
     document.title = 'Terms and Conditions | ANGA Hub';
     
-    // Add animation class after component is mounted
     setTimeout(() => {
       const pageElement = document.querySelector('.terms-conditions-page');
       if (pageElement) pageElement.classList.add('visible');
