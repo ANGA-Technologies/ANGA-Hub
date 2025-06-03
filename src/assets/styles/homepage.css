@@ -135,6 +135,7 @@
         min-height: 100vh;
         position: relative;
         overflow: hidden;
+        perspective: 1000px;
     }
 
     main::before {
@@ -198,13 +199,15 @@
         z-index: 1;
         border: 1px solid rgba(255, 255, 255, 0.2);
         transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        transform-style: preserve-3d;
+        will-change: transform;
     }
 
     .home-container:hover {
         box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2), 0 2px 10px rgba(0, 0, 0, 0.1);
         transform: translateY(-5px);
     }
-      
+    
     .home-container .text {
         flex: 1;
         color: white;
@@ -275,15 +278,21 @@
             linear-gradient(to right, transparent, black 20%, black 80%, transparent); /* Horizontal transparency */
         -webkit-mask-composite: intersect;
         mask-composite: intersect;
+        will-change: transform;
+        transition: transform 0.2s ease-out;
     }
 }
 
 /* Why Us Section */
 .why-us-section {
+    width: 100%;
+    border-radius: 2px;
     padding: 100px 0;
     background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
     position: relative;
     overflow: hidden;
+    transform-style: preserve-3d;
+    perspective: 1000px;
 }
 
 .why-us-section::before {
@@ -317,6 +326,8 @@
     display: inline-block;
     left: 50%;
     transform: translateX(-50%);
+    transition: transform 0.5s ease-out;
+    will-change: transform;
 }
 
 .section-title::after {
@@ -337,33 +348,49 @@
     transform: scaleX(1);
 }
 
-.divider {
-    height: 4px;
-    width: 100px;
-    background: linear-gradient(103.88deg, #8A2BE2 0%, #D32F2F 100%);
-    margin: 0 auto 50px;
-    border-radius: 2px;
+/* Section transition effect */
+.section-transition {
+    height: 150px;
+    width: 100%;
     position: relative;
+    overflow: hidden;
+    margin: 30px 0;
 }
 
-.divider::before, .divider::after {
+.section-transition::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, rgba(138, 43, 226, 0.5), rgba(211, 47, 47, 0.5), transparent);
+    z-index: 1;
+    transform: translateY(-50%);
+    animation: pulse-width 3s ease-in-out infinite;
+}
+
+.section-transition::after {
     content: '';
     position: absolute;
     top: 0;
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background: #8A2BE2;
-    transform: translateY(-50%);
-}
-
-.divider::before {
     left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+    animation: pulse-opacity 4s ease-in-out infinite;
 }
 
-.divider::after {
-    right: 0;
-    background: #D32F2F;
+@keyframes pulse-width {
+    0% { transform: translateY(-50%) scaleX(0.7); }
+    50% { transform: translateY(-50%) scaleX(1); }
+    100% { transform: translateY(-50%) scaleX(0.7); }
+}
+
+@keyframes pulse-opacity {
+    0% { opacity: 0.3; }
+    50% { opacity: 0.7; }
+    100% { opacity: 0.3; }
 }
 
 .why-us-grid {
@@ -372,6 +399,7 @@
     gap: 40px;
     margin-top: 60px;
     perspective: 1000px;
+    transform-style: preserve-3d;
 }
 
 .why-us-card {
@@ -386,6 +414,9 @@
     overflow: hidden;
     border: 1px solid rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(5px);
+    transform-style: preserve-3d;
+    will-change: transform;
+    backface-visibility: hidden;
 }
 
 .why-us-card::before {
@@ -504,10 +535,14 @@
 
 /* Tools We Use Section */
 .tools-section {
+    width: 100%;
+    border-radius: 2px;
     padding: 100px 0;
-    background: linear-gradient(135deg, #ffffff 0%, #f5f5f5 100%);
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
     position: relative;
     overflow: hidden;
+    transform-style: preserve-3d;
+    perspective: 1000px;
 }
 
 .tools-section::before {
@@ -529,6 +564,7 @@
     gap: 40px;
     margin-top: 60px;
     perspective: 1000px;
+    transform-style: preserve-3d;
 }
 
 .tool-card {
@@ -545,6 +581,9 @@
     z-index: 1;
     overflow: hidden;
     border: 1px solid rgba(138, 43, 226, 0.05);
+    transform-style: preserve-3d;
+    will-change: transform;
+    backface-visibility: hidden;
 }
 
 .tool-card::before {
@@ -683,6 +722,18 @@
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+@keyframes float3D {
+    0% {
+        transform: translateZ(0) translateY(0) rotateX(0) rotateY(0);
+    }
+    50% {
+        transform: translateZ(20px) translateY(-10px) rotateX(5deg) rotateY(5deg);
+    }
+    100% {
+        transform: translateZ(0) translateY(0) rotateX(0) rotateY(0);
     }
 }
 

@@ -16,7 +16,6 @@
     <section class="why-us-section">
       <div class="container">
         <h2 class="section-title">Why Choose Us?</h2>
-        <div class="divider"></div>
         
         <div class="why-us-grid">
           <div class="why-us-card">
@@ -54,30 +53,13 @@
       </div>
     </section>
     
-    <!-- Section Separator -->
-    <div class="section-separator">
-      <div class="separator-line"></div>
-      <div class="separator-icon">
-        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="url(#grad)" stroke-width="2"/>
-          <path d="M12 6V18" stroke="url(#grad)" stroke-width="2" stroke-linecap="round"/>
-          <path d="M6 12H18" stroke="url(#grad)" stroke-width="2" stroke-linecap="round"/>
-          <defs>
-            <linearGradient id="grad" x1="2" y1="2" x2="22" y2="22" gradientUnits="userSpaceOnUse">
-              <stop offset="0" stop-color="#8A2BE2"/>
-              <stop offset="1" stop-color="#D32F2F"/>
-            </linearGradient>
-          </defs>
-        </svg>
-      </div>
-      <div class="separator-line"></div>
-    </div>
+    <!-- Animated Section Transition -->
+    <div class="section-transition"></div>
     
     <!-- Tools We Use Section -->
     <section class="tools-section">
       <div class="container">
         <h2 class="section-title">Tools We Use</h2>
-        <div class="divider"></div>
         
         <div class="tools-grid">
           <div class="tool-card">
@@ -131,17 +113,88 @@ export default {
       isDeleting: false,
       typingSpeed: 150,
       parallaxX: 0,
-      parallaxY: 0
+      parallaxY: 0,
+      scrollY: 0,
+      ticking: false
     }
   },
   mounted() {
     this.typeText();
     window.addEventListener('mousemove', this.handleMouseMove);
+    window.addEventListener('scroll', this.handleScroll);
+    this.initParallaxElements();
   },
   beforeUnmount() {
     window.removeEventListener('mousemove', this.handleMouseMove);
+    window.removeEventListener('scroll', this.handleScroll);
   },
   methods: {
+    initParallaxElements() {
+      // Add data attributes to elements we want to animate on scroll
+      const cards = document.querySelectorAll('.why-us-card, .tool-card');
+      cards.forEach((card, index) => {
+        card.setAttribute('data-depth', (0.1 + (index % 3) * 0.05).toFixed(2));
+        card.setAttribute('data-direction', index % 2 === 0 ? '1' : '-1');
+      });
+      
+      // Initialize with current scroll position
+      this.handleScroll();
+    },
+    
+    handleScroll() {
+      this.scrollY = window.scrollY;
+      
+      if (!this.ticking) {
+        window.requestAnimationFrame(() => {
+          this.updateParallaxElements();
+          this.ticking = false;
+        });
+        this.ticking = true;
+      }
+    },
+    
+    updateParallaxElements() {
+      // Apply parallax effect to section titles
+      const titles = document.querySelectorAll('.section-title');
+      titles.forEach(title => {
+        const speed = 0.15;
+        const rect = title.getBoundingClientRect();
+        const centerY = rect.top + rect.height / 2;
+        const viewportHeight = window.innerHeight;
+        const distanceFromCenter = centerY - viewportHeight / 2;
+        const translateY = -distanceFromCenter * speed;
+        
+        title.style.transform = `translateX(-50%) translateY(${translateY}px)`;
+      });
+      
+      // Apply 3D effect to cards based on scroll position
+      const cards = document.querySelectorAll('.why-us-card, .tool-card');
+      cards.forEach(card => {
+        const rect = card.getBoundingClientRect();
+        const depth = parseFloat(card.getAttribute('data-depth') || 0.1);
+        const direction = parseInt(card.getAttribute('data-direction') || 1);
+        
+        // Only animate cards that are visible in the viewport
+        if (rect.top < window.innerHeight && rect.bottom > 0) {
+          const scrollPercentage = (window.innerHeight - rect.top) / (window.innerHeight + rect.height);
+          const rotateX = (scrollPercentage * 10 - 5) * depth;
+          const rotateY = (scrollPercentage * 10 - 5) * depth * direction;
+          
+          card.style.transform = `
+            translateY(-${scrollPercentage * 15}px)
+            rotateX(${rotateX}deg)
+            rotateY(${rotateY}deg)
+            scale(${1 + scrollPercentage * 0.05})
+          `;
+        }
+      });
+      
+      // Parallax for background elements
+      const mainBackground = document.querySelector('.main-background');
+      if (mainBackground) {
+        mainBackground.style.transform = `translateY(${this.scrollY * 0.05}px)`;
+      }
+    },
     typeText() {
       const current = this.index % this.fullText.split('.').length;
       const fullWord = this.fullText.split('.')[current];
@@ -183,13 +236,18 @@ export default {
       // Apply the parallax effect to elements
       const mainBackground = document.querySelector('.main-background');
       const africaMap = document.querySelector('.africa-map img');
+      const homeContainer = document.querySelector('.home-container');
       
       if (mainBackground) {
-        mainBackground.style.transform = `translate(${this.parallaxX * -1}px, ${this.parallaxY * -1}px)`;
+        mainBackground.style.transform = `translate(${this.parallaxX * -1}px, ${this.parallaxY * -1}px) translateY(${this.scrollY * 0.05}px)`;
       }
       
       if (africaMap) {
-        africaMap.style.transform = `translate(${this.parallaxX * 2}px, ${this.parallaxY * 2}px)`;
+        africaMap.style.transform = `translate(${this.parallaxX * 2}px, ${this.parallaxY * 2}px) rotate(${this.parallaxX * 0.05}deg)`;
+      }
+      
+      if (homeContainer) {
+        homeContainer.style.transform = `perspective(1000px) rotateX(${this.parallaxY * 0.01}deg) rotateY(${this.parallaxX * -0.01}deg)`;
       }
     }
   }
