@@ -9,20 +9,20 @@
         <section class="company-overview">
             <div class="overview-content">
                 <h2>Our Story</h2>
-                <p>Founded in 2022, ANGA Hub emerged from a vision to transform Africa's technological landscape. The name "ANGA" - Africa NextGen Apex - embodies our commitment to positioning Africa at the forefront of global innovation.</p>
-                <p>What began as a small team of passionate technologists has evolved into a dynamic organization driving digital transformation across multiple sectors. Our journey is defined by bold innovation, strategic partnerships, and an unwavering commitment to excellence.</p>
+                <p>ANGA Hub was born from the shared vision of two passionate computer science students. Fueled by a desire to solve complex problems and build impactful systems, their mission was clear: to develop technology that would unite and uplift the African continent. The name "ANGA" - Africa NextGen Apex - crystallizes this ambition, representing our dedication to placing Africa at the forefront of technological advancement and innovation.</p>
+                <p>From late-night coding sessions and a relentless pursuit of excellence, what started as a student-led initiative has blossomed into a dynamic force for digital transformation. We are committed to leveraging cutting-edge solutions and strategic collaborations to address Africa's unique challenges and unlock its vast potential. Our journey is one of youthful ingenuity maturing into impactful, real-world solutions, always driven by a core belief in technology's power to foster a brighter future for the continent.</p>
             </div>
             <div class="overview-stats">
                 <div class="stat-item">
-                    <span class="stat-number">3+</span>
+                    <span class="stat-number">2+</span>
                     <span class="stat-label">Years of Innovation</span>
                 </div>
                 <div class="stat-item">
-                    <span class="stat-number">20+</span>
+                    <span class="stat-number">3+</span>
                     <span class="stat-label">Completed Projects</span>
                 </div>
                 <div class="stat-item">
-                    <span class="stat-number">5+</span>
+                    <span class="stat-number">2+</span>
                     <span class="stat-label">Countries Served</span>
                 </div>
                 <div class="stat-item">
@@ -69,32 +69,20 @@
         <section class="leadership">
             <h2>Leadership Team</h2>
             <div class="leadership-intro">
-                <p>Our diverse leadership team brings together decades of experience across technology, business, and social impact sectors. United by a shared vision, they drive ANGA Hub's mission forward with strategic insight and innovative thinking.</p>
+                <p>ANGA Hub is spearheaded by its co-founders, Edwin Shayo and Alfred Moyo. With a shared passion for technology and a unified vision for Africa's digital empowerment, they guide the company's strategic direction and foster a culture of innovation and excellence.</p>
             </div>
             <div class="leadership-grid">
                 <div class="leader-card">
                     <div class="leader-photo placeholder-photo"></div>
-                    <h3>Sarah Mwangi</h3>
-                    <p class="leader-title">Chief Executive Officer</p>
-                    <p class="leader-bio">With 15+ years in tech leadership, Sarah drives ANGA Hub's strategic vision and growth initiatives.</p>
+                    <h3>Edwin Shayo</h3>
+                    <p class="leader-title">Co-founder</p>
+                    <p class="leader-bio">Edwin brings a wealth of technical expertise and a passion for building scalable, impactful solutions that address Africa's unique digital challenges.</p>
                 </div>
                 <div class="leader-card">
                     <div class="leader-photo placeholder-photo"></div>
-                    <h3>David Ochieng</h3>
-                    <p class="leader-title">Chief Technology Officer</p>
-                    <p class="leader-bio">A veteran software architect, David leads our technical innovation and development teams.</p>
-                </div>
-                <div class="leader-card">
-                    <div class="leader-photo placeholder-photo"></div>
-                    <h3>Amina Diallo</h3>
-                    <p class="leader-title">Chief Operations Officer</p>
-                    <p class="leader-bio">Amina ensures operational excellence across all ANGA Hub initiatives and partnerships.</p>
-                </div>
-                <div class="leader-card">
-                    <div class="leader-photo placeholder-photo"></div>
-                    <h3>Michael Adeyemi</h3>
-                    <p class="leader-title">Chief Strategy Officer</p>
-                    <p class="leader-bio">Michael shapes our long-term strategy and identifies new market opportunities across Africa.</p>
+                    <h3>Alfred Moyo</h3>
+                    <p class="leader-title">Co-founder</p>
+                    <p class="leader-bio">Alfred's strategic vision and deep understanding of the African market drive ANGA Hub's growth and commitment to empowering businesses across the continent.</p>
                 </div>
             </div>
         </section>
