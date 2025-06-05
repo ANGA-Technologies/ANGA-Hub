@@ -109,5 +109,5 @@ export default {
 };
 </script>
 
-<style scoped src="@/assets/styles/company.css"></style>
+<style scoped src="@/assets/styles/companypage.css"></style>
 

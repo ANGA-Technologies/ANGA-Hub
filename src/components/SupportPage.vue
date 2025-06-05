@@ -94,6 +94,4 @@ export default {
 };
 </script>
 
-<style scoped>
-@import '../assets/styles/supportpage.css';
-</style>
+<style scoped src="@/assets/styles/supportpage.css"></style>
