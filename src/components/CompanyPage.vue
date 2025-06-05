@@ -76,13 +76,13 @@
                     <div class="leader-photo placeholder-photo"></div>
                     <h3>Edwin Shayo</h3>
                     <p class="leader-title">Co-founder</p>
-                    <p class="leader-bio">Edwin brings a wealth of technical expertise and a passion for building scalable, impactful solutions that address Africa's unique digital challenges.</p>
+                    <p class="leader-bio">Edwin's passion lies in creating transformative software and hardware solutions that positively impact communities. His technical expertise and innovative mindset drive ANGA Hub's mission to deliver impactful digital solutions.</p>
                 </div>
                 <div class="leader-card">
                     <div class="leader-photo placeholder-photo"></div>
                     <h3>Alfred Moyo</h3>
                     <p class="leader-title">Co-founder</p>
-                    <p class="leader-bio">Alfred's strategic vision and deep understanding of the African market drive ANGA Hub's growth and commitment to empowering businesses across the continent.</p>
+                    <p class="leader-bio">Inspired by African tech success stories like Flutterwave, Yoco, and M-Kopa, Alfred co-founded ANGA Hub with a vision to empower Africa's digital transformation. His deep understanding of the African market fuels our strategic direction and growth initiatives.</p>
                 </div>
             </div>
         </section>
@@ -92,11 +92,10 @@
             <div class="future-content">
                 <p>At ANGA Hub, we're building more than a company – we're cultivating an ecosystem that will power Africa's technological renaissance. Our roadmap includes:</p>
                 <ul>
-                    <li>Expanding our innovation hubs to 10 African countries by 2027</li>
-                    <li>Launching a venture capital fund to support early-stage African tech startups</li>
-                    <li>Developing proprietary technologies that address critical infrastructure challenges</li>
-                    <li>Creating a pan-African network of tech talent and resources</li>
-                    <li>Establishing strategic partnerships with global technology leaders</li>
+                    <li>Expanding our services to 3 African countries by 2030.</li>
+                    <li>Developing proprietary technologies that address critical infrastructure challenges.</li>
+                    <li>Creating a pan-African network of tech talent and resources.</li>
+                    <li>Establishing strategic partnerships with global technology leaders.</li>
                 </ul>
                 <p>We invite you to join us on this journey as we redefine what's possible for African technology and innovation.</p>
             </div>
@@ -110,242 +109,5 @@ export default {
 };
 </script>
 
-<style scoped>
-.company-page {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 40px 20px;
-    color: #F0F0F5;
-}
+<style scoped src="@/assets/styles/company.css"></style>
 
-h1, h2, h3 {
-    font-family: 'Montserrat', sans-serif;
-}
-
-h1 {
-    font-size: 3rem;
-    margin-bottom: 10px;
-    background: linear-gradient(103.88deg, #8A2BE2 0%, #D32F2F 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    text-align: center;
-}
-
-h2 {
-    font-size: 1.8rem;
-    margin-bottom: 25px;
-    color: #F0F0F5;
-}
-
-p {
-    line-height: 1.6;
-    margin-bottom: 15px;
-}
-
-section {
-    margin-bottom: 80px;
-}
-
-/* Hero Section */
-.company-hero {
-    text-align: center;
-    margin-bottom: 60px;
-}
-
-.company-hero h2 {
-    font-size: 2rem;
-    margin: 15px 0;
-    font-weight: 500;
-}
-
-.tagline {
-    font-size: 1.2rem;
-    font-style: italic;
-    opacity: 0.9;
-}
-
-/* Company Overview */
-.company-overview {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 40px;
-    align-items: center;
-    background: rgba(25, 25, 65, 0.3);
-    border-radius: 15px;
-    padding: 40px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-    border: 1px solid rgba(255, 255, 255, 0.05);
-}
-
-.overview-content {
-    flex: 1;
-    min-width: 300px;
-}
-
-.overview-stats {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
-    flex: 1;
-    min-width: 300px;
-}
-
-.stat-item {
-    text-align: center;
-    padding: 20px;
-    background: rgba(25, 25, 65, 0.5);
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    transition: transform 0.3s ease;
-}
-
-.stat-item:hover {
-    transform: translateY(-5px);
-}
-
-.stat-number {
-    display: block;
-    font-size: 2.5rem;
-    font-weight: 700;
-    margin-bottom: 10px;
-    background: linear-gradient(103.88deg, #8A2BE2 0%, #D32F2F 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-}
-
-.stat-label {
-    font-size: 0.9rem;
-    opacity: 0.9;
-}
-
-/* Strategic Pillars */
-.pillars-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
-    margin-top: 40px;
-}
-
-.pillar-card {
-    background: rgba(25, 25, 65, 0.3);
-    border-radius: 10px;
-    padding: 30px;
-    text-align: center;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.pillar-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-}
-
-.pillar-icon {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    color: #8A2BE2;
-}
-
-.pillar-card h3 {
-    font-size: 1.4rem;
-    margin-bottom: 15px;
-    color: #F0F0F5;
-}
-
-/* Leadership Team */
-.leadership-intro {
-    max-width: 800px;
-    margin: 0 auto 40px;
-    text-align: center;
-}
-
-.leadership-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
-}
-
-.leader-card {
-    background: rgba(25, 25, 65, 0.3);
-    border-radius: 10px;
-    padding: 30px;
-    text-align: center;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    transition: transform 0.3s ease;
-}
-
-.leader-card:hover {
-    transform: translateY(-5px);
-}
-
-.leader-photo {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    margin: 0 auto 20px;
-    overflow: hidden;
-}
-
-.placeholder-photo {
-    background: linear-gradient(135deg, #8A2BE2 0%, #D32F2F 100%);
-}
-
-.leader-card h3 {
-    font-size: 1.3rem;
-    margin-bottom: 5px;
-}
-
-.leader-title {
-    font-size: 0.9rem;
-    opacity: 0.8;
-    margin-bottom: 15px;
-    font-style: italic;
-}
-
-.leader-bio {
-    font-size: 0.95rem;
-    line-height: 1.5;
-}
-
-/* Future Vision */
-.company-future {
-    background: rgba(25, 25, 65, 0.3);
-    border-radius: 15px;
-    padding: 40px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-    border: 1px solid rgba(255, 255, 255, 0.05);
-}
-
-.company-future h2 {
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-.future-content ul {
-    margin: 20px 0 20px 20px;
-}
-
-.future-content li {
-    margin-bottom: 10px;
-    line-height: 1.5;
-}
-
-@media (max-width: 768px) {
-    .company-overview {
-        flex-direction: column;
-    }
-    
-    .overview-stats {
-        width: 100%;
-    }
-    
-    .leadership-grid {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    }
-}
-</style>
