@@ -92,7 +92,7 @@
             <div class="future-content">
                 <p>At ANGA Hub, we're building more than a company – we're cultivating an ecosystem that will power Africa's technological renaissance. Our roadmap includes:</p>
                 <ul>
-                    <li>Expanding our services to 3 African countries by 2020</li>
+                    <li>Expanding our services to 3 African countries by 2030</li>
                     <li>Developing proprietary technologies that address critical infrastructure challenges</li>
                     <li>Creating a pan-African network of tech talent and resources</li>
                     <li>Establishing strategic partnerships with global technology leaders</li>
@@ -106,6 +106,9 @@
 <script>
 export default {
     name: 'CompanyPage',
+    mounted() {
+        document.title = 'Company | ANGA Hub';
+    }
 };
 </script>
 
