@@ -105,6 +105,7 @@
 
 <script>
 export default {
+  name: 'HomePage',
   data() {
     return {
       displayText: '',
@@ -123,6 +124,7 @@ export default {
     window.addEventListener('mousemove', this.handleMouseMove);
     window.addEventListener('scroll', this.handleScroll);
     this.initParallaxElements();
+    document.title = 'Home | ANGA Hub';
   },
   beforeUnmount() {
     window.removeEventListener('mousemove', this.handleMouseMove);
@@ -253,5 +255,7 @@ export default {
   }
 };
 </script>
+
+
 
 <style scoped src="@/assets/styles/homepage.css"></style>
