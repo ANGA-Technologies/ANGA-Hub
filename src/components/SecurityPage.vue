@@ -131,6 +131,7 @@
 export default {
     name: 'SecurityPage',
     mounted() {
+        document.title = 'Security | ANGA Hub';
         // Initialize intersection observer for section animations
         this.initSectionAnimations();
     },
