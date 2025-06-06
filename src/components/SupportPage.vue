@@ -43,12 +43,12 @@
                 <div class="faq-container">
                     <div class="faq-item">
                         <h3>What are your support hours?</h3>
-                        <p>Our support team is available Monday through Friday, 9:00 AM to 6:00 PM EAT. For urgent matters, we offer limited weekend support.</p>
+                        <p>Our support team is available 24hrs a day, 7 days a week.</p>
                     </div>
                     
                     <div class="faq-item">
                         <h3>How quickly can I expect a response?</h3>
-                        <p>We aim to respond to all support requests within 24 hours. For premium clients, our response time is typically under 4 hours.</p>
+                        <p>We aim to respond to all support requests within 24 hours.</p>
                     </div>
                     
                     <div class="faq-item">
@@ -91,6 +91,9 @@
 <script>
 export default {
     name: 'SupportPage',
+    mounted() {
+        document.title = 'Support | ANGA Hub';
+    }
 };
 </script>
 
