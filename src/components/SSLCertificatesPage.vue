@@ -248,6 +248,7 @@
 export default {
     name: 'SSLCertificatesPage',
     mounted() {
+        document.title = 'SSL Certificates | ANGA Hub';
         // Initialize intersection observer for section animations
         this.initSectionAnimations();
     },
@@ -279,41 +280,10 @@ export default {
 
 <style scoped>
 @import '../assets/styles/sslcertificatespage.css';
-</style>
 
-.benefit-card:hover::before {
-    opacity: 1;
-}
 
-.benefit-icon {
-    font-size: 2.8rem;
-    margin-bottom: 25px;
-    color: #8A2BE2;
-    transition: all 0.5s ease;
-    position: relative;
-}
 
-.benefit-icon::after {
-    content: '';
-    position: absolute;
-    width: 70px;
-    height: 70px;
-    background: linear-gradient(135deg, rgba(138, 43, 226, 0.1) 0%, rgba(211, 47, 47, 0.1) 100%);
-    border-radius: 50%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: -1;
-    transition: all 0.5s ease;
-}
 
-.benefit-card:hover .benefit-icon {
-    transform: scale(1.1) translateY(-5px);
-    background: linear-gradient(103.88deg, #8A2BE2 0%, #D32F2F 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-}
 
 .benefit-card:hover .benefit-icon::after {
     transform: translate(-50%, -50%) scale(1.2);
@@ -581,3 +551,6 @@ export default {
         transform: translateY(0);
     }
 }
+</style>
+
+
