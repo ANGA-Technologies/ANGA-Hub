@@ -285,122 +285,18 @@ export default {
 
 
 
-.benefit-card:hover .benefit-icon::after {
-    transform: translate(-50%, -50%) scale(1.2);
-}
 
-/* SSL Types */
-.types-container {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    margin-top: 40px;
-}
 
-.ssl-type {
-    background: rgba(25, 25, 65, 0.3);
-    border-radius: 10px;
-    padding: 30px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    transition: transform 0.3s ease;
-}
 
-.ssl-type:hover {
-    transform: translateY(-5px);
-}
 
-.type-details {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
 
-.validation-level {
-    margin-bottom: 10px;
-}
 
-.level-indicator {
-    display: inline-block;
-    padding: 5px 15px;
-    border-radius: 50px;
-    font-size: 0.9rem;
-    font-weight: 600;
-}
-
-.basic {
-    background: rgba(76, 175, 80, 0.2);
-    color: #4CAF50;
-    border: 1px solid rgba(76, 175, 80, 0.3);
-}
-
-.intermediate {
-    background: rgba(33, 150, 243, 0.2);
-    color: #2196F3;
-    border: 1px solid rgba(33, 150, 243, 0.3);
-}
-
-.premium {
-    background: rgba(138, 43, 226, 0.2);
-    color: #8A2BE2;
-    border: 1px solid rgba(138, 43, 226, 0.3);
-}
-
-.special {
-    background: rgba(255, 152, 0, 0.2);
-    color: #FF9800;
-    border: 1px solid rgba(255, 152, 0, 0.3);
-}
-
-.features-list {
-    margin-left: 20px;
-}
-
-.features-list li {
-    margin-bottom: 8px;
-    line-height: 1.5;
-}
 
 /* Process Steps */
-.process-steps {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
-    margin-top: 40px;
-}
 
-.process-step {
-    background: rgba(25, 25, 65, 0.3);
-    border-radius: 10px;
-    padding: 30px;
-    text-align: center;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    transition: transform 0.3s ease;
-    position: relative;
-}
 
-.process-step:hover {
-    transform: translateY(-5px);
-}
 
-.step-number {
-    position: absolute;
-    top: -20px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 40px;
-    height: 40px;
-    background: linear-gradient(103.88deg, #8A2BE2 0%, #D32F2F 100%);
-    color: white;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 700;
-    font-size: 1.2rem;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-}
+
 
 /* FAQ Section */
 .faq-container {
