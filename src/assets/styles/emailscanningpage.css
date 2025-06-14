@@ -592,7 +592,7 @@
 }
 
 /* CTA Section */
-.cta-section {
+.email-security-page .cta-section {
     background: var(--glass-bg);
     backdrop-filter: blur(20px);
     border-radius: 25px;
@@ -604,7 +604,7 @@
     overflow: hidden;
 }
 
-.cta-section::before {
+.email-security-page .cta-section::before {
     content: '';
     position: absolute;
     top: 0;

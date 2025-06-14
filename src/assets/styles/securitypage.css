@@ -241,7 +241,7 @@
 }
 
 /* CTA Section */
-.cta-section {
+.security-page .cta-section {
     background: linear-gradient(135deg, rgba(138, 43, 226, 0.2) 0%, rgba(211, 47, 47, 0.2) 100%);
     border-radius: 15px;
     padding: 60px 40px;
