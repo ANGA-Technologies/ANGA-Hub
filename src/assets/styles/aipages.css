@@ -1,0 +1,206 @@
+/* AI Pages Common Styles */
+.ai-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    color: #F0F0F5;
+    text-align: justify;
+}
+
+.ai-page h1, .ai-page h2, .ai-page h3 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.ai-page h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    background: linear-gradient(103.88deg, #8A2BE2 0%, #D32F2F 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-align: center;
+}
+
+.ai-page h2 {
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+    color: #F0F0F5;
+}
+
+.ai-page h3 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    color: #F0F0F5;
+}
+
+.ai-page p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.ai-page section {
+    margin-bottom: 60px;
+}
+
+/* Hero Section */
+.ai-hero {
+    text-align: center;
+    margin-bottom: 60px;
+    padding: 60px 0;
+}
+
+.tagline {
+    font-size: 1.3rem;
+    max-width: 700px;
+    margin: 0 auto;
+    opacity: 0.9;
+}
+
+/* Overview Section */
+.ai-overview {
+    background: rgba(25, 25, 65, 0.3);
+    border-radius: 15px;
+    padding: 40px;
+    margin: 40px 0;
+}
+
+.overview-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Features Grid */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.feature-card {
+    background: rgba(25, 25, 65, 0.3);
+    border-radius: 10px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+}
+
+.feature-icon {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #8A2BE2;
+}
+
+/* Approach Steps */
+.approach-steps {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.step {
+    display: flex;
+    margin-bottom: 30px;
+    align-items: flex-start;
+}
+
+.step-number {
+    background: linear-gradient(135deg, #8A2BE2 0%, #D32F2F 100%);
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    margin-right: 20px;
+    flex-shrink: 0;
+}
+
+.step-content {
+    background: rgba(25, 25, 65, 0.3);
+    padding: 20px;
+    border-radius: 10px;
+    flex-grow: 1;
+}
+
+/* Benefits Section */
+.benefits-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.benefit-item {
+    background: rgba(25, 25, 65, 0.3);
+    border-radius: 10px;
+    padding: 30px;
+    transition: transform 0.3s ease;
+}
+
+.benefit-item:hover {
+    transform: translateY(-5px);
+}
+
+/* CTA Section */
+.cta-section {
+    background: linear-gradient(135deg, rgba(138, 43, 226, 0.2) 0%, rgba(211, 47, 47, 0.2) 100%);
+    border-radius: 15px;
+    padding: 60px 40px;
+    text-align: center;
+    margin-top: 60px;
+}
+
+.cta-button {
+    display: inline-block;
+    background: linear-gradient(135deg, #8A2BE2 0%, #D32F2F 100%);
+    color: white;
+    padding: 15px 40px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    color: white;
+    text-decoration: none;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .ai-page h1 {
+        font-size: 2.2rem;
+    }
+    
+    .ai-page h2 {
+        font-size: 1.5rem;
+    }
+    
+    .ai-overview,
+    .feature-card,
+    .benefit-item {
+        padding: 20px;
+    }
+    
+    .step {
+        flex-direction: column;
+    }
+    
+    .step-number {
+        margin-bottom: 15px;
+    }
+}

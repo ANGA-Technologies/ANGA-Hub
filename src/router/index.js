@@ -12,6 +12,9 @@ import WebsiteSecurityPage from '@/components/WebsiteSecurityPage.vue';
 import CookiesPage from '@/components/CookiesPage.vue';
 import PrivacyPolicyPage from '@/components/PrivacyPolicyPage.vue';
 import TermsAndConditionsPage from '@/components/TermsAndConditionsPage.vue';
+import AICustomerSupportPage from '@/components/AICustomerSupportPage.vue';
+import AIConsultationPage from '@/components/AIConsultationPage.vue';
+import AIPromptSupportPage from '@/components/AIPromptSupportPage.vue';
 
 const routes = [
   {
@@ -45,6 +48,22 @@ const routes = [
     path: '/services',
     name: 'Services',
     component: ServicePage,
+  },
+  // AI Services section
+  {
+    path: '/ai/customer-support',
+    name: 'AICustomerSupport',
+    component: AICustomerSupportPage,
+  },
+  {
+    path: '/ai/consultation',
+    name: 'AIConsultation',
+    component: AIConsultationPage,
+  },
+  {
+    path: '/ai/prompt-support',
+    name: 'AIPromptSupport',
+    component: AIPromptSupportPage,
   },
   // Security section
   {
