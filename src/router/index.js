@@ -51,17 +51,17 @@ const routes = [
   },
   // AI Services section
   {
-    path: '/ai/customer-support',
+    path: '/services/ai-customer-support',
     name: 'AICustomerSupport',
     component: AICustomerSupportPage,
   },
   {
-    path: '/ai/consultation',
+    path: '/services/ai-consultant',
     name: 'AIConsultation',
     component: AIConsultationPage,
   },
   {
-    path: '/ai/prompt-support',
+    path: '/services/ai-prompt-support',
     name: 'AIPromptSupport',
     component: AIPromptSupportPage,
   },
