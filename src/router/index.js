@@ -18,6 +18,8 @@ import AIPromptSupportPage from '@/components/AIPromptSupportPage.vue';
 import WebDesignPage from '@/components/WebDesignPage.vue';
 import AppDevelopmentPage from '@/components/AppDevelopmentPage.vue';
 import DesktopPage from '@/components/DesktopPage.vue';
+import AndroidPage from '@/components/AndroidPage.vue';
+import IOSPage from '@/components/IOSPage.vue';
 
 const routes = [
   {
@@ -78,6 +80,17 @@ const routes = [
     path: '/services/app-development',
     name: 'AppDevelopment',
     component: AppDevelopmentPage,
+  },
+  // Mobile Development Services
+  {
+    path: '/services/android',
+    name: 'Android',
+    component: AndroidPage,
+  },
+  {
+    path: '/services/ios',
+    name: 'IOS',
+    component: IOSPage,
   },
   {
     path: '/services/desktop',
