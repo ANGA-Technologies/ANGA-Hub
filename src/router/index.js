@@ -15,6 +15,9 @@ import TermsAndConditionsPage from '@/components/TermsAndConditionsPage.vue';
 import AICustomerSupportPage from '@/components/AICustomerSupportPage.vue';
 import AIConsultationPage from '@/components/AIConsultationPage.vue';
 import AIPromptSupportPage from '@/components/AIPromptSupportPage.vue';
+import WebDesignPage from '@/components/WebDesignPage.vue';
+import AppDevelopmentPage from '@/components/AppDevelopmentPage.vue';
+import DesktopPage from '@/components/DesktopPage.vue';
 
 const routes = [
   {
@@ -64,6 +67,22 @@ const routes = [
     path: '/services/ai-prompt-support',
     name: 'AIPromptSupport',
     component: AIPromptSupportPage,
+  },
+  // Web Development Services
+  {
+    path: '/services/web-design',
+    name: 'WebDesign',
+    component: WebDesignPage,
+  },
+  {
+    path: '/services/app-development',
+    name: 'AppDevelopment',
+    component: AppDevelopmentPage,
+  },
+  {
+    path: '/services/desktop',
+    name: 'Desktop',
+    component: DesktopPage,
   },
   // Security section
   {
